@@ -1,6 +1,0 @@
-log_level: info
-lease_duration_ms: 30000
-scheduler_interval_ms: 1000
-queue_max_size: 1000
-artifacts_path: "/tmp/artifacts"
-mongodb_uri: "mongodb://localhost:27017"
