@@ -17,6 +17,7 @@ export interface IJob extends mongoose.Document {
     runAt: Date;
     leaseOwner? : string;
     leaseExpireAt? : Date;
+    attempt: number;
     history: IJobHistory[]
     createdAt: Date;
     updatedAt: Date;
@@ -55,6 +56,10 @@ const jobSchema = new Schema<IJob>(
         leaseOwner:{
             type: String,
             default: null
+        },
+        attempt: {
+            type: Number,
+            default: 0
         },
         history: {
             type: [{
