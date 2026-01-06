@@ -5,7 +5,7 @@ const client = new Redis();
 const processJobs = async () => {
     while (true) {
         try {
-            let jobInfo: [string, string] | null = await client.brpop('jobs');
+            let jobInfo: [string, string] | null = await client.brpop('jobs', 0);
             if (!jobInfo) {
                 return;
             }

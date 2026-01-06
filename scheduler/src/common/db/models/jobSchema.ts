@@ -15,6 +15,8 @@ export interface IJob extends mongoose.Document {
     payload: any;
     state: STATE;
     runAt: Date;
+    artifactUrl : string;
+    checksum: string;
     leaseOwner? : string;
     leaseExpireAt? : Date;
     attempt: number;
@@ -37,6 +39,14 @@ const jobSchema = new Schema<IJob>(
         },
         payload:{
             type: Object,
+            required: true
+        },
+        artifactUrl: {
+            type: String, 
+            required: true
+        },
+        checksum: {
+            type: String, 
             required: true
         },
         state:{
