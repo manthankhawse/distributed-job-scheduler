@@ -11645,3 +11645,377 @@
 2026-01-06 22:22:37:2237 [32minfo[39m: [32m🔥 Claimed Job: job-future-1 (Type: undefined)[39m
 2026-01-06 22:22:37:2237 [32minfo[39m: [32mPushed job[39m
 2026-01-06 22:23:22:2322 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 11:01:09:19 [32minfo[39m: [32mserver started[39m
+2026-01-07 11:01:09:19 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 11:13:47:1347 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 11:13:49:1349 [32minfo[39m: [32m🔥 Claimed Job: job-f0d5a5cc-8cc1-4328-bf02-ffc6c9c10c5e (Type: undefined)[39m
+2026-01-07 11:13:49:1349 [32minfo[39m: [32mPushed job[39m
+2026-01-07 11:19:09:199 [32minfo[39m: [32m🔥 Claimed Job: job-f0d5a5cc-8cc1-4328-bf02-ffc6c9c10c5e (Type: undefined)[39m
+2026-01-07 11:19:09:199 [32minfo[39m: [32mPushed job[39m
+2026-01-07 11:23:18:2318 [31merror[39m: [31m❌ Worker Error: The request signature we calculated does not match the signature you provided. Check your key and signing method.[39m
+2026-01-07 11:23:19:2319 [31merror[39m: [31m❌ Worker Error: The request signature we calculated does not match the signature you provided. Check your key and signing method.[39m
+2026-01-07 11:25:09:259 [32minfo[39m: [32m🔥 Claimed Job: job-f0d5a5cc-8cc1-4328-bf02-ffc6c9c10c5e (Type: undefined)[39m
+2026-01-07 11:25:09:259 [32minfo[39m: [32mPushed job[39m
+2026-01-07 11:25:09:259 [31merror[39m: [31m❌ Worker Error: The request signature we calculated does not match the signature you provided. Check your key and signing method.[39m
+2026-01-07 11:25:51:2551 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 11:28:19:2819 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 11:28:30:2830 [32minfo[39m: [32mserver started[39m
+2026-01-07 11:28:30:2830 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 11:28:38:2838 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 11:28:40:2840 [32minfo[39m: [32m🔥 Claimed Job: job-83bfead3-a512-424e-bf0f-9e9d7531f660 (Type: undefined)[39m
+2026-01-07 11:28:40:2840 [32minfo[39m: [32m⚙️ Processing job-83bfead3-a512-424e-bf0f-9e9d7531f660[39m
+2026-01-07 11:28:40:2840 [32minfo[39m: [32mPushed job[39m
+2026-01-07 11:28:40:2840 [31merror[39m: [31m❌ Worker Error: The request signature we calculated does not match the signature you provided. Check your key and signing method.[39m
+2026-01-07 11:33:23:3323 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 11:34:27:3427 [32minfo[39m: [32mserver started[39m
+2026-01-07 11:34:27:3427 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 11:34:34:3434 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 11:34:45:3445 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 11:34:47:3447 [32minfo[39m: [32m🔥 Claimed Job: job-5ca79f52-0117-4973-b360-afcaa9d4ceae (Type: undefined)[39m
+2026-01-07 11:34:47:3447 [32minfo[39m: [32mPushed job[39m
+2026-01-07 11:34:47:3447 [32minfo[39m: [32m⚙️ Processing job-5ca79f52-0117-4973-b360-afcaa9d4ceae[39m
+2026-01-07 11:34:47:3447 [32minfo[39m: [32m[Loader] Starting download for Job job-5ca79f52-0117-4973-b360-afcaa9d4ceae[39m
+2026-01-07 11:34:47:3447 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: undefined[39m
+2026-01-07 11:34:47:3447 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 11:34:47:3447 [31merror[39m: [31m❌ [Loader] Failed: The request signature we calculated does not match the signature you provided. Check your key and signing method.[39m
+2026-01-07 11:34:47:3447 [31merror[39m: [31m❌ Worker Error: The request signature we calculated does not match the signature you provided. Check your key and signing method.[39m
+2026-01-07 11:36:43:3643 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 11:36:47:3647 [32minfo[39m: [32m🔥 Claimed Job: job-e51dae6f-df3e-43e9-b6b3-5a7128922daa (Type: undefined)[39m
+2026-01-07 11:36:47:3647 [32minfo[39m: [32mPushed job[39m
+2026-01-07 11:37:19:3719 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 11:43:35:4335 [32minfo[39m: [32mserver started[39m
+2026-01-07 11:43:35:4335 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 11:43:39:4339 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 11:43:40:4340 [32minfo[39m: [32m🔥 Claimed Job: job-7c94dd14-5e1d-4e58-bbff-eba68671ac76 (Type: undefined)[39m
+2026-01-07 11:43:40:4340 [32minfo[39m: [32mPushed job[39m
+2026-01-07 11:44:35:4435 [32minfo[39m: [32m🔥 Claimed Job: job-5ca79f52-0117-4973-b360-afcaa9d4ceae (Type: undefined)[39m
+2026-01-07 11:44:35:4435 [32minfo[39m: [32mPushed job[39m
+2026-01-07 11:45:35:4535 [32minfo[39m: [32m🔥 Claimed Job: job-e51dae6f-df3e-43e9-b6b3-5a7128922daa (Type: undefined)[39m
+2026-01-07 11:45:35:4535 [32minfo[39m: [32mPushed job[39m
+2026-01-07 11:48:46:4846 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 11:48:50:4850 [32minfo[39m: [32m🔥 Claimed Job: job-03b5dbc1-11a6-4a65-aa3d-ffa2bae41352 (Type: undefined)[39m
+2026-01-07 11:48:50:4850 [32minfo[39m: [32mPushed job[39m
+2026-01-07 11:49:00:490 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 11:49:00:490 [32minfo[39m: [32m⚙️ Processing job-03b5dbc1-11a6-4a65-aa3d-ffa2bae41352[39m
+2026-01-07 11:49:00:490 [32minfo[39m: [32mjob: [object Object][39m
+2026-01-07 11:49:00:490 [32minfo[39m: [32m[Loader] Starting download for Job job-03b5dbc1-11a6-4a65-aa3d-ffa2bae41352[39m
+2026-01-07 11:49:00:490 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: undefined[39m
+2026-01-07 11:49:00:490 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 11:49:00:490 [31merror[39m: [31m❌ [Loader] Failed: The request signature we calculated does not match the signature you provided. Check your key and signing method.[39m
+2026-01-07 11:49:00:490 [31merror[39m: [31m❌ Worker Error: The request signature we calculated does not match the signature you provided. Check your key and signing method.[39m
+2026-01-07 11:49:41:4941 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 11:50:59:5059 [32minfo[39m: [32mserver started[39m
+2026-01-07 11:50:59:5059 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 11:51:04:514 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 11:51:04:514 [32minfo[39m: [32m🔥 Claimed Job: job-ca5e69cd-961c-45d8-9bed-1f14c1805fc1 (Type: undefined)[39m
+2026-01-07 11:51:04:514 [32minfo[39m: [32mPushed job[39m
+2026-01-07 11:53:14:5314 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 11:53:14:5314 [32minfo[39m: [32m⚙️ Processing job-ca5e69cd-961c-45d8-9bed-1f14c1805fc1[39m
+2026-01-07 11:53:14:5314 [32minfo[39m: [32mjob: [object Object][39m
+2026-01-07 11:53:14:5314 [32minfo[39m: [32m[Loader] Starting download for Job job-ca5e69cd-961c-45d8-9bed-1f14c1805fc1[39m
+2026-01-07 11:53:14:5314 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: undefined[39m
+2026-01-07 11:53:14:5314 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 11:53:15:5315 [31merror[39m: [31m❌ [Loader] Failed: The request signature we calculated does not match the signature you provided. Check your key and signing method.[39m
+2026-01-07 11:53:15:5315 [31merror[39m: [31m❌ Worker Error: The request signature we calculated does not match the signature you provided. Check your key and signing method.[39m
+2026-01-07 11:53:59:5359 [32minfo[39m: [32m🔥 Claimed Job: job-03b5dbc1-11a6-4a65-aa3d-ffa2bae41352 (Type: undefined)[39m
+2026-01-07 11:53:59:5359 [32minfo[39m: [32m⚙️ Processing job-03b5dbc1-11a6-4a65-aa3d-ffa2bae41352[39m
+2026-01-07 11:53:59:5359 [32minfo[39m: [32mPushed job[39m
+2026-01-07 11:53:59:5359 [32minfo[39m: [32mjob: [object Object][39m
+2026-01-07 11:53:59:5359 [32minfo[39m: [32m[Loader] Starting download for Job job-03b5dbc1-11a6-4a65-aa3d-ffa2bae41352[39m
+2026-01-07 11:53:59:5359 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: undefined[39m
+2026-01-07 11:53:59:5359 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 11:53:59:5359 [31merror[39m: [31m❌ [Loader] Failed: The request signature we calculated does not match the signature you provided. Check your key and signing method.[39m
+2026-01-07 11:53:59:5359 [31merror[39m: [31m❌ Worker Error: The request signature we calculated does not match the signature you provided. Check your key and signing method.[39m
+2026-01-07 11:56:04:564 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 11:56:15:5615 [32minfo[39m: [32mserver started[39m
+2026-01-07 11:56:15:5615 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 11:56:21:5621 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 11:56:42:5642 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 11:56:45:5645 [32minfo[39m: [32m🔥 Claimed Job: job-d216e5e2-e3ad-49b0-be6b-309214d16a36 (Type: undefined)[39m
+2026-01-07 11:56:45:5645 [32minfo[39m: [32m⚙️ Processing job-d216e5e2-e3ad-49b0-be6b-309214d16a36[39m
+2026-01-07 11:56:45:5645 [32minfo[39m: [32mPushed job[39m
+2026-01-07 11:56:45:5645 [32minfo[39m: [32mjob: undefined[39m
+2026-01-07 11:56:45:5645 [32minfo[39m: [32m📦 Job Payload: {[39m
+[32m  "_id": "695dfca2d70ed0b90813dadb",[39m
+[32m  "jobId": "job-d216e5e2-e3ad-49b0-be6b-309214d16a36",[39m
+[32m  "payload": {[39m
+[32m    "name": "Gemini"[39m
+[32m  },[39m
+[32m  "attempt": 1[39m
+[32m}[39m
+2026-01-07 11:56:45:5645 [32minfo[39m: [32m[Loader] Starting download for Job job-d216e5e2-e3ad-49b0-be6b-309214d16a36[39m
+2026-01-07 11:56:45:5645 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: undefined[39m
+2026-01-07 11:56:45:5645 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 11:56:45:5645 [31merror[39m: [31m❌ [Loader] Failed: The request signature we calculated does not match the signature you provided. Check your key and signing method.[39m
+2026-01-07 11:56:45:5645 [31merror[39m: [31m❌ Worker Error: The request signature we calculated does not match the signature you provided. Check your key and signing method.[39m
+2026-01-07 11:59:32:5932 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 11:59:42:5942 [32minfo[39m: [32mserver started[39m
+2026-01-07 11:59:42:5942 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 11:59:47:5947 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 12:00:01:01 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32m🔥 Claimed Job: job-855b2d36-1a73-423c-bc1e-a18820a137bd (Type: PYTHON_JOB)[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32mPushed job[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32m⚙️ Processing job-855b2d36-1a73-423c-bc1e-a18820a137bd[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32mjob: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32m📦 Job Payload: {[39m
+[32m  "_id": "695dfd69707742f9f1c8beea",[39m
+[32m  "jobId": "job-855b2d36-1a73-423c-bc1e-a18820a137bd",[39m
+[32m  "type": "PYTHON_JOB",[39m
+[32m  "payload": {[39m
+[32m    "name": "Gemini"[39m
+[32m  },[39m
+[32m  "artifactUrl": "scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py",[39m
+[32m  "checksum": "ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f",[39m
+[32m  "state": "RUNNING",[39m
+[32m  "runAt": "2026-01-07T06:30:01.800Z",[39m
+[32m  "leaseExpireAt": "2026-01-07T06:35:02.170Z",[39m
+[32m  "leaseOwner": "scheduler-50256",[39m
+[32m  "attempt": 1,[39m
+[32m  "history": [[39m
+[32m    {[39m
+[32m      "state": "PENDING",[39m
+[32m      "reason": "Job submitted via API",[39m
+[32m      "timestamp": "2026-01-07T06:30:01.800Z",[39m
+[32m      "_id": "695dfd69707742f9f1c8beeb"[39m
+[32m    },[39m
+[32m    {[39m
+[32m      "state": "RUNNING",[39m
+[32m      "reason": "Claimed by scheduler-50256",[39m
+[32m      "timestamp": "2026-01-07T06:30:02.170Z",[39m
+[32m      "_id": "695dfd6a707742f9f1c8beed"[39m
+[32m    }[39m
+[32m  ],[39m
+[32m  "createdAt": "2026-01-07T06:30:01.820Z",[39m
+[32m  "updatedAt": "2026-01-07T06:30:02.171Z",[39m
+[32m  "__v": 0[39m
+[32m}[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32m[Loader] Starting download for Job job-855b2d36-1a73-423c-bc1e-a18820a137bd[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32m[Loader] Streaming data to disk...[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32m[Loader] Download complete. Verifying checksum...[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-855b2d36-1a73-423c-bc1e-a18820a137bd/payload.py[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-855b2d36-1a73-423c-bc1e-a18820a137bd[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-855b2d36-1a73-423c-bc1e-a18820a137bd -> /app[39m
+2026-01-07 12:00:02:02 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 12:00:02:02 [31merror[39m: [31m❌ [Executor] Docker Error: (HTTP code 404) no such container - No such image: python:3.9-slim [39m
+2026-01-07 12:00:02:02 [31merror[39m: [31m❌ Worker Error: (HTTP code 404) no such container - No such image: python:3.9-slim [39m
+2026-01-07 12:03:44:344 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 12:04:02:42 [32minfo[39m: [32mserver started[39m
+2026-01-07 12:04:02:42 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 12:04:09:49 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 12:04:49:449 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32m🔥 Claimed Job: job-d0aa3246-310a-4ecf-ab7c-c3319d5f70aa (Type: PYTHON_JOB)[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32m⚙️ Processing job-d0aa3246-310a-4ecf-ab7c-c3319d5f70aa[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32mPushed job[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32mjob: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32m📦 Job Payload: {[39m
+[32m  "_id": "695dfe893a240b114cb66947",[39m
+[32m  "jobId": "job-d0aa3246-310a-4ecf-ab7c-c3319d5f70aa",[39m
+[32m  "type": "PYTHON_JOB",[39m
+[32m  "payload": {[39m
+[32m    "name": "Gemini"[39m
+[32m  },[39m
+[32m  "artifactUrl": "scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py",[39m
+[32m  "checksum": "ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f",[39m
+[32m  "state": "RUNNING",[39m
+[32m  "runAt": "2026-01-07T06:34:49.232Z",[39m
+[32m  "leaseExpireAt": "2026-01-07T06:39:52.379Z",[39m
+[32m  "leaseOwner": "scheduler-52310",[39m
+[32m  "attempt": 1,[39m
+[32m  "history": [[39m
+[32m    {[39m
+[32m      "state": "PENDING",[39m
+[32m      "reason": "Job submitted via API",[39m
+[32m      "timestamp": "2026-01-07T06:34:49.232Z",[39m
+[32m      "_id": "695dfe893a240b114cb66948"[39m
+[32m    },[39m
+[32m    {[39m
+[32m      "state": "RUNNING",[39m
+[32m      "reason": "Claimed by scheduler-52310",[39m
+[32m      "timestamp": "2026-01-07T06:34:52.379Z",[39m
+[32m      "_id": "695dfe8c3a240b114cb6694a"[39m
+[32m    }[39m
+[32m  ],[39m
+[32m  "createdAt": "2026-01-07T06:34:49.270Z",[39m
+[32m  "updatedAt": "2026-01-07T06:34:52.380Z",[39m
+[32m  "__v": 0[39m
+[32m}[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32m[Loader] Starting download for Job job-d0aa3246-310a-4ecf-ab7c-c3319d5f70aa[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32m[Loader] Streaming data to disk...[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32m[Loader] Download complete. Verifying checksum...[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-d0aa3246-310a-4ecf-ab7c-c3319d5f70aa/payload.py[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-d0aa3246-310a-4ecf-ab7c-c3319d5f70aa[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-d0aa3246-310a-4ecf-ab7c-c3319d5f70aa -> /app[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 12:04:52:452 [32minfo[39m: [32m⬇️ Image python:3.9-slim missing. Pulling...[39m
+2026-01-07 12:05:14:514 [32minfo[39m: [32m✅ Pulled python:3.9-slim[39m
+2026-01-07 12:05:24:524 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-07 12:05:24:524 [32minfo[39m: [32m[Executor] Logs captured (60 chars)[39m
+2026-01-07 12:05:34:534 [31merror[39m: [31m❌ Worker Error: Operation `jobs.findOneAndUpdate()` buffering timed out after 10000ms[39m
+2026-01-07 12:08:08:88 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 15:59:18:5918 [32minfo[39m: [32mserver started[39m
+2026-01-07 15:59:18:5918 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 15:59:35:5935 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 16:00:06:06 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32m🔥 Claimed Job: job-e20ccf54-d72c-4836-b30f-dc734b1a03ef (Type: PYTHON_JOB)[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32mPushed job[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32m⚙️ Processing job-e20ccf54-d72c-4836-b30f-dc734b1a03ef[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32mjob: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32m📦 Job Payload: {[39m
+[32m  "_id": "695e35aeda91f4de8e6a1a0e",[39m
+[32m  "jobId": "job-e20ccf54-d72c-4836-b30f-dc734b1a03ef",[39m
+[32m  "type": "PYTHON_JOB",[39m
+[32m  "payload": {[39m
+[32m    "name": "Gemini"[39m
+[32m  },[39m
+[32m  "artifactUrl": "scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py",[39m
+[32m  "checksum": "ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f",[39m
+[32m  "state": "RUNNING",[39m
+[32m  "runAt": "2026-01-07T10:30:06.416Z",[39m
+[32m  "leaseExpireAt": "2026-01-07T10:35:08.430Z",[39m
+[32m  "leaseOwner": "scheduler-16750",[39m
+[32m  "attempt": 1,[39m
+[32m  "history": [[39m
+[32m    {[39m
+[32m      "state": "PENDING",[39m
+[32m      "reason": "Job submitted via API",[39m
+[32m      "timestamp": "2026-01-07T10:30:06.416Z",[39m
+[32m      "_id": "695e35aeda91f4de8e6a1a0f"[39m
+[32m    },[39m
+[32m    {[39m
+[32m      "state": "RUNNING",[39m
+[32m      "reason": "Claimed by scheduler-16750",[39m
+[32m      "timestamp": "2026-01-07T10:30:08.430Z",[39m
+[32m      "_id": "695e35b0da91f4de8e6a1a11"[39m
+[32m    }[39m
+[32m  ],[39m
+[32m  "createdAt": "2026-01-07T10:30:06.448Z",[39m
+[32m  "updatedAt": "2026-01-07T10:30:08.430Z",[39m
+[32m  "__v": 0[39m
+[32m}[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32m[Loader] Starting download for Job job-e20ccf54-d72c-4836-b30f-dc734b1a03ef[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32m[Loader] Streaming data to disk...[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32m[Loader] Download complete. Verifying checksum...[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-e20ccf54-d72c-4836-b30f-dc734b1a03ef/payload.py[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-e20ccf54-d72c-4836-b30f-dc734b1a03ef[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-e20ccf54-d72c-4836-b30f-dc734b1a03ef -> /app[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 16:00:08:08 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 16:00:15:015 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-07 16:00:15:015 [32minfo[39m: [32m[Executor] Logs captured (60 chars)[39m
+2026-01-07 16:00:15:015 [32minfo[39m: [32m✅ Job job-e20ccf54-d72c-4836-b30f-dc734b1a03ef COMPLETED[39m
+2026-01-07 16:12:30:1230 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32m🔥 Claimed Job: job-a1094426-10f4-4202-b016-3d71a71e2af5 (Type: PYTHON_JOB)[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32mPushed job[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32m⚙️ Processing job-a1094426-10f4-4202-b016-3d71a71e2af5[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32mjob: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32m📦 Job Payload: {[39m
+[32m  "_id": "695e3896da91f4de8e6a1b59",[39m
+[32m  "jobId": "job-a1094426-10f4-4202-b016-3d71a71e2af5",[39m
+[32m  "type": "PYTHON_JOB",[39m
+[32m  "payload": {[39m
+[32m    "name": "Gemini"[39m
+[32m  },[39m
+[32m  "artifactUrl": "scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py",[39m
+[32m  "checksum": "ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f",[39m
+[32m  "state": "RUNNING",[39m
+[32m  "runAt": "2026-01-07T10:42:30.554Z",[39m
+[32m  "leaseExpireAt": "2026-01-07T10:47:33.406Z",[39m
+[32m  "leaseOwner": "scheduler-16750",[39m
+[32m  "attempt": 1,[39m
+[32m  "history": [[39m
+[32m    {[39m
+[32m      "state": "PENDING",[39m
+[32m      "reason": "Job submitted via API",[39m
+[32m      "timestamp": "2026-01-07T10:42:30.554Z",[39m
+[32m      "_id": "695e3896da91f4de8e6a1b5a"[39m
+[32m    },[39m
+[32m    {[39m
+[32m      "state": "RUNNING",[39m
+[32m      "reason": "Claimed by scheduler-16750",[39m
+[32m      "timestamp": "2026-01-07T10:42:33.406Z",[39m
+[32m      "_id": "695e3899da91f4de8e6a1b5c"[39m
+[32m    }[39m
+[32m  ],[39m
+[32m  "createdAt": "2026-01-07T10:42:30.565Z",[39m
+[32m  "updatedAt": "2026-01-07T10:42:33.406Z",[39m
+[32m  "__v": 0[39m
+[32m}[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32m[Loader] Starting download for Job job-a1094426-10f4-4202-b016-3d71a71e2af5[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32m[Loader] Streaming data to disk...[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32m[Loader] Download complete. Verifying checksum...[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-a1094426-10f4-4202-b016-3d71a71e2af5/payload.py[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-a1094426-10f4-4202-b016-3d71a71e2af5[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-a1094426-10f4-4202-b016-3d71a71e2af5 -> /app[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 16:12:33:1233 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 16:12:38:1238 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-07 16:12:38:1238 [32minfo[39m: [32m[Executor] Logs captured (60 chars)[39m
+2026-01-07 16:12:38:1238 [32minfo[39m: [32m✅ Job job-a1094426-10f4-4202-b016-3d71a71e2af5 COMPLETED[39m
+2026-01-07 16:13:52:1352 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 16:13:58:1358 [32minfo[39m: [32mserver started[39m
+2026-01-07 16:13:58:1358 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 16:13:58:1358 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 16:14:15:1415 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32m🔥 Claimed Job: job-41aa895c-f44e-4c77-b5c9-3bd8160daf1d (Type: PYTHON_JOB)[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32m⚙️ Processing job-41aa895c-f44e-4c77-b5c9-3bd8160daf1d[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32mPushed job[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32mjob: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32m📦 Job Payload: {[39m
+[32m  "_id": "695e38ffab68a0e67c462e77",[39m
+[32m  "jobId": "job-41aa895c-f44e-4c77-b5c9-3bd8160daf1d",[39m
+[32m  "type": "PYTHON_JOB",[39m
+[32m  "payload": {[39m
+[32m    "name": "Gemini"[39m
+[32m  },[39m
+[32m  "artifactUrl": "scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py",[39m
+[32m  "checksum": "ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f",[39m
+[32m  "state": "RUNNING",[39m
+[32m  "runAt": "2026-01-07T10:44:15.650Z",[39m
+[32m  "leaseExpireAt": "2026-01-07T10:49:18.701Z",[39m
+[32m  "leaseOwner": "scheduler-20019",[39m
+[32m  "attempt": 1,[39m
+[32m  "history": [[39m
+[32m    {[39m
+[32m      "state": "PENDING",[39m
+[32m      "reason": "Job submitted via API",[39m
+[32m      "timestamp": "2026-01-07T10:44:15.650Z",[39m
+[32m      "_id": "695e38ffab68a0e67c462e78"[39m
+[32m    },[39m
+[32m    {[39m
+[32m      "state": "RUNNING",[39m
+[32m      "reason": "Claimed by scheduler-20019",[39m
+[32m      "timestamp": "2026-01-07T10:44:18.701Z",[39m
+[32m      "_id": "695e3902ab68a0e67c462e7a"[39m
+[32m    }[39m
+[32m  ],[39m
+[32m  "createdAt": "2026-01-07T10:44:15.687Z",[39m
+[32m  "updatedAt": "2026-01-07T10:44:18.702Z",[39m
+[32m  "__v": 0[39m
+[32m}[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32m[Loader] Starting download for Job job-41aa895c-f44e-4c77-b5c9-3bd8160daf1d[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: scripts/ed9ea206a12c26ce3cd6538b38059706bff0ea6003dc9458ce0f647ff9ab164f.py[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32m[Loader] Streaming data to disk...[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32m[Loader] Download complete. Verifying checksum...[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-41aa895c-f44e-4c77-b5c9-3bd8160daf1d/payload.py[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-41aa895c-f44e-4c77-b5c9-3bd8160daf1d[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-41aa895c-f44e-4c77-b5c9-3bd8160daf1d -> /app[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 16:14:18:1418 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 16:14:24:1424 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-07 16:14:24:1424 [32minfo[39m: [32m[Executor] Logs captured (60 chars)[39m
+2026-01-07 16:14:24:1424 [32minfo[39m: [32m✅ Job job-41aa895c-f44e-4c77-b5c9-3bd8160daf1d COMPLETED[39m
+2026-01-07 16:15:19:1519 [32minfo[39m: [32mHTTP server closed successfully.[39m

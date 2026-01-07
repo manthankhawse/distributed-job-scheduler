@@ -19,6 +19,9 @@ export interface IJob extends mongoose.Document {
     checksum: string;
     leaseOwner? : string;
     leaseExpireAt? : Date;
+    exitCode?: number;
+    completedAt?: Date;
+    logs?: string;
     attempt: number;
     history: IJobHistory[]
     createdAt: Date;
@@ -71,6 +74,9 @@ const jobSchema = new Schema<IJob>(
             type: Number,
             default: 0
         },
+        exitCode: { type: Number },
+        logs: { type: String },
+        completedAt: { type: Date },
         history: {
             type: [{
                 state: { type: String, required: true },

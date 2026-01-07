@@ -1,8 +1,6 @@
 import Job, { IJob } from "../common/db/models/jobSchema"
 
-type jobArg = Pick<IJob, "jobId" | "payload" | "attempt" | "type">
-
-export const pickNextJob = async (ownerId: string): Promise<jobArg | null> => {
+export const pickNextJob = async (ownerId: string): Promise<IJob | null> => {
     const now = new Date();
     const leaseTime = 5 * 60 * 1000; 
 
@@ -28,12 +26,7 @@ export const pickNextJob = async (ownerId: string): Promise<jobArg | null> => {
         },
         {
             sort: { runAt: 1 },
-            new: true,
-            projection:{
-                jobId: 1,
-                payload: 1,
-                attempt: 1
-            }
+            new: true
         }
     );
 

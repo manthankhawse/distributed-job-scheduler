@@ -7,9 +7,6 @@ dotenv.config();
 
 const client = new Redis();
 
-
-type jobArg = Pick<IJob, "jobId" | "payload" | "attempt" | "type">
-
 export const isQueueFull = async (): Promise<boolean>=>{
     try {
         const len = await client.llen('jobs');
@@ -19,7 +16,7 @@ export const isQueueFull = async (): Promise<boolean>=>{
     }
 }
 
-export const dispatch = async (job: jobArg) : Promise<void>=>{
+export const dispatch = async (job: any) : Promise<void>=>{
     try {
         await client.lpush('jobs', JSON.stringify(job));
         logger.info("Pushed job");

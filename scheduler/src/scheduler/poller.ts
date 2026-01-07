@@ -7,8 +7,6 @@ import { dispatch, isQueueFull } from "./dispatch";
 
 dotenv.config();
 
-type jobArg = Pick<IJob, "jobId" | "payload" | "attempt" | "type">
-
 
 const startPolling = ()=>{
     const SCHEDULER_ID = `scheduler-${process.pid}`
@@ -22,7 +20,7 @@ const startPolling = ()=>{
                 setTimeout(poll, POLLING_INTERVAL);
                 return;
             }
-            const job: jobArg | null = await pickNextJob(SCHEDULER_ID);
+            const job: IJob | null = await pickNextJob(SCHEDULER_ID);
 
             if(job){
                 logger.info(`🔥 Claimed Job: ${job.jobId} (Type: ${job.type})`);
