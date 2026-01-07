@@ -7,7 +7,6 @@ import { dispatch, isQueueFull } from "./dispatch";
 
 dotenv.config();
 
-
 const startPolling = ()=>{
     const SCHEDULER_ID = `scheduler-${process.pid}`
     const POLLING_INTERVAL = Number(process.env.POLLING_INTERVAL as string);

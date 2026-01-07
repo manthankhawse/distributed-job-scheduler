@@ -3,7 +3,7 @@ import fs from 'fs';
 import fsPromises from 'fs/promises';
 import logger from '../common/logger';
 import path from 'path';
-import connectDB from '../common/db/connectDB';
+import { RUNTIMES } from '../common/runtimes';
 
 
 const docker = new Docker();
@@ -26,24 +26,34 @@ const ensureImageExists = async (imageName: string) => {
 export const executeContainer = async (
     jobId: string, 
     hostMountPath: string, 
-    payload: any
+    fileName: string,
+    payload: any,
+    dependencies: string[] = [],
+    runtime: string = 'python:3.9'
 ): Promise<{ exitCode: number, logs: string }> => {
+
+    const config = RUNTIMES[runtime] || RUNTIMES['python:3.9'];
+
     
+    if(!config) throw new Error("Runtime not found error");
+
+    const containerPath = `/app/${fileName}`;
+    const cmd = config.getCommand(containerPath, dependencies)
     logger.info(`[Executor] Preparing to spawn container for ${jobId}`);
+    logger.info(`[Executor] Dependency list -> ${JSON.stringify(dependencies)}`);
     logger.info(`[Executor] Mounting: ${hostMountPath} -> /app`);
     
     const logFile = path.join(hostMountPath, 'logs.txt');
     const logStream = fs.createWriteStream(logFile);
 
     try {
-        await connectDB();
         logger.info(`[Executor] Docker Request: Creating container...`);
 
-        await ensureImageExists('python:3.9-slim');
+        await ensureImageExists(config.image);
         
         const result = await docker.run(
-            'python:3.9-slim',
-            ['python', '-u', '/app/payload.py'],
+            config.image,
+            cmd,
             logStream,
             {
                 Env: [`PAYLOAD=${JSON.stringify(payload)}`],

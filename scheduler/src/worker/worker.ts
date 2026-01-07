@@ -4,6 +4,7 @@ import JobModel from '../common/db/models/jobSchema';
 import { downloadAndVerify } from './loader';
 import fs from 'fs';
 import { executeContainer } from './executor';
+import connectDB from '../common/db/connectDB';
 
 const client = new Redis({
     host: 'localhost',
@@ -13,6 +14,14 @@ const client = new Redis({
 
 const processJobs = async () => {
     logger.info("👷 Worker started. Polling Redis...");
+    try {
+        await connectDB();
+        logger.info("✅ Worker Connected to MongoDB");
+    } catch (error) {
+        //@ts-ignore
+        logger.error(`❌ Worker Error: ${error.message}`);
+        await new Promise(resolve => setTimeout(resolve, 1000));   
+    }
 
     while (true) {
         try {
@@ -23,14 +32,11 @@ const processJobs = async () => {
             
             logger.info(`⚙️ Processing ${job.jobId}`);
             logger.info(`job: ${job.artifactUrl}`);
+            logger.info(`deps: ${JSON.stringify(job.dependencies)}`);
 
-            logger.info(`📦 Job Payload: ${JSON.stringify(job, null, 2)}`);
-
-            const jobDir = await downloadAndVerify(job.jobId, job.artifactUrl, job.checksum);
-
+            const {jobDir, fileName} = await downloadAndVerify(job.jobId, job.artifactUrl, job.checksum, job.runtime);
             
-
-            const { exitCode, logs } = await executeContainer(job.jobId, jobDir, job.payload);
+            const { exitCode, logs } = await executeContainer(job.jobId, jobDir, fileName, job.payload, job.dependencies, job.runtime);
 
             fs.rmSync(jobDir, { recursive: true, force: true });
 

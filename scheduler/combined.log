@@ -12019,3 +12019,505 @@
 2026-01-07 16:14:24:1424 [32minfo[39m: [32m[Executor] Logs captured (60 chars)[39m
 2026-01-07 16:14:24:1424 [32minfo[39m: [32m✅ Job job-41aa895c-f44e-4c77-b5c9-3bd8160daf1d COMPLETED[39m
 2026-01-07 16:15:19:1519 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 18:13:44:1344 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 18:13:45:1345 [32minfo[39m: [32mserver started[39m
+2026-01-07 18:13:45:1345 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 18:14:10:1410 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 18:14:11:1411 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 18:14:11:1411 [32minfo[39m: [32m✅ Worker Connected to MongoDB[39m
+2026-01-07 18:14:19:1419 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 18:14:20:1420 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 18:14:20:1420 [32minfo[39m: [32m✅ Worker Connected to MongoDB[39m
+2026-01-07 18:18:36:1836 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 18:18:47:1847 [32minfo[39m: [32mserver started[39m
+2026-01-07 18:18:47:1847 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 18:18:56:1856 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab.py[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5.js[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m🔥 Claimed Job: job-01179b09-9c0b-446d-87a7-70adf996327e (Type: TEST_JOB)[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m⚙️ Processing job-01179b09-9c0b-446d-87a7-70adf996327e[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a.sh[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m🔥 Claimed Job: job-a8718ac2-72ab-4078-8a24-f8f7d435969b (Type: TEST_JOB)[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m🔥 Claimed Job: job-8ade40a0-fa56-40e5-9cde-a92c61d162b1 (Type: TEST_JOB)[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32mjob: scripts/de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab.py[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m📦 Job Payload: {[39m
+[32m  "_id": "695e5638f7bf592f67dfaee6",[39m
+[32m  "jobId": "job-01179b09-9c0b-446d-87a7-70adf996327e",[39m
+[32m  "type": "TEST_JOB",[39m
+[32m  "payload": {[39m
+[32m    "message": "Testing python:3.9"[39m
+[32m  },[39m
+[32m  "artifactUrl": "scripts/de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab.py",[39m
+[32m  "checksum": "de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab",[39m
+[32m  "state": "RUNNING",[39m
+[32m  "runAt": "2026-01-07T12:48:56.891Z",[39m
+[32m  "leaseExpireAt": "2026-01-07T12:53:57.495Z",[39m
+[32m  "leaseOwner": "scheduler-43128",[39m
+[32m  "attempt": 1,[39m
+[32m  "runtime": "python:3.9",[39m
+[32m  "dependencies": [[39m
+[32m    "[\"requests\"]"[39m
+[32m  ],[39m
+[32m  "history": [[39m
+[32m    {[39m
+[32m      "state": "PENDING",[39m
+[32m      "reason": "Job submitted via API",[39m
+[32m      "timestamp": "2026-01-07T12:48:56.892Z",[39m
+[32m      "_id": "695e5638f7bf592f67dfaee7"[39m
+[32m    },[39m
+[32m    {[39m
+[32m      "state": "RUNNING",[39m
+[32m      "reason": "Claimed by scheduler-43128",[39m
+[32m      "timestamp": "2026-01-07T12:48:57.495Z",[39m
+[32m      "_id": "695e5639f7bf592f67dfaeec"[39m
+[32m    }[39m
+[32m  ],[39m
+[32m  "createdAt": "2026-01-07T12:48:56.913Z",[39m
+[32m  "updatedAt": "2026-01-07T12:48:57.495Z",[39m
+[32m  "__v": 0[39m
+[32m}[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m[Loader] Starting download for Job job-01179b09-9c0b-446d-87a7-70adf996327e[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: scripts/de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab.py[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m[Loader] Streaming data to disk...[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m[Loader] Download complete. Verifying checksum...[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-01179b09-9c0b-446d-87a7-70adf996327e/payload.py[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-01179b09-9c0b-446d-87a7-70adf996327e[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-01179b09-9c0b-446d-87a7-70adf996327e -> /app[39m
+2026-01-07 18:18:57:1857 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 1[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m[Executor] Logs captured (314 chars)[39m
+2026-01-07 18:19:08:198 [31merror[39m: [31m❌ Job job-01179b09-9c0b-446d-87a7-70adf996327e FAILED (Exit: 1)[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m⚙️ Processing job-a8718ac2-72ab-4078-8a24-f8f7d435969b[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32mjob: scripts/5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5.js[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m📦 Job Payload: {[39m
+[32m  "_id": "695e5639f7bf592f67dfaee9",[39m
+[32m  "jobId": "job-a8718ac2-72ab-4078-8a24-f8f7d435969b",[39m
+[32m  "type": "TEST_JOB",[39m
+[32m  "payload": {[39m
+[32m    "message": "Testing node:18"[39m
+[32m  },[39m
+[32m  "artifactUrl": "scripts/5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5.js",[39m
+[32m  "checksum": "5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5",[39m
+[32m  "state": "RUNNING",[39m
+[32m  "runAt": "2026-01-07T12:48:57.360Z",[39m
+[32m  "leaseExpireAt": "2026-01-07T12:53:57.510Z",[39m
+[32m  "leaseOwner": "scheduler-43128",[39m
+[32m  "attempt": 1,[39m
+[32m  "runtime": "node:18",[39m
+[32m  "dependencies": [[39m
+[32m    "[\"axios\"]"[39m
+[32m  ],[39m
+[32m  "history": [[39m
+[32m    {[39m
+[32m      "state": "PENDING",[39m
+[32m      "reason": "Job submitted via API",[39m
+[32m      "timestamp": "2026-01-07T12:48:57.360Z",[39m
+[32m      "_id": "695e5639f7bf592f67dfaeea"[39m
+[32m    },[39m
+[32m    {[39m
+[32m      "state": "RUNNING",[39m
+[32m      "reason": "Claimed by scheduler-43128",[39m
+[32m      "timestamp": "2026-01-07T12:48:57.510Z",[39m
+[32m      "_id": "695e5639f7bf592f67dfaef3"[39m
+[32m    }[39m
+[32m  ],[39m
+[32m  "createdAt": "2026-01-07T12:48:57.368Z",[39m
+[32m  "updatedAt": "2026-01-07T12:48:57.510Z",[39m
+[32m  "__v": 0[39m
+[32m}[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m[Loader] Starting download for Job job-a8718ac2-72ab-4078-8a24-f8f7d435969b[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: scripts/5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5.js[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m[Loader] Streaming data to disk...[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m[Loader] Download complete. Verifying checksum...[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-a8718ac2-72ab-4078-8a24-f8f7d435969b/payload.js[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-a8718ac2-72ab-4078-8a24-f8f7d435969b[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-a8718ac2-72ab-4078-8a24-f8f7d435969b -> /app[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:19:08:198 [32minfo[39m: [32m⬇️ Image node:18-alpine missing. Pulling...[39m
+2026-01-07 18:19:29:1929 [32minfo[39m: [32m✅ Pulled node:18-alpine[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 1[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m[Executor] Logs captured (402 chars)[39m
+2026-01-07 18:19:35:1935 [31merror[39m: [31m❌ Job job-a8718ac2-72ab-4078-8a24-f8f7d435969b FAILED (Exit: 1)[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m⚙️ Processing job-8ade40a0-fa56-40e5-9cde-a92c61d162b1[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32mjob: scripts/97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a.sh[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m📦 Job Payload: {[39m
+[32m  "_id": "695e5639f7bf592f67dfaef0",[39m
+[32m  "jobId": "job-8ade40a0-fa56-40e5-9cde-a92c61d162b1",[39m
+[32m  "type": "TEST_JOB",[39m
+[32m  "payload": {[39m
+[32m    "message": "Testing bash"[39m
+[32m  },[39m
+[32m  "artifactUrl": "scripts/97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a.sh",[39m
+[32m  "checksum": "97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a",[39m
+[32m  "state": "RUNNING",[39m
+[32m  "runAt": "2026-01-07T12:48:57.505Z",[39m
+[32m  "leaseExpireAt": "2026-01-07T12:53:57.519Z",[39m
+[32m  "leaseOwner": "scheduler-43128",[39m
+[32m  "attempt": 1,[39m
+[32m  "runtime": "bash",[39m
+[32m  "dependencies": [],[39m
+[32m  "history": [[39m
+[32m    {[39m
+[32m      "state": "PENDING",[39m
+[32m      "reason": "Job submitted via API",[39m
+[32m      "timestamp": "2026-01-07T12:48:57.505Z",[39m
+[32m      "_id": "695e5639f7bf592f67dfaef1"[39m
+[32m    },[39m
+[32m    {[39m
+[32m      "state": "RUNNING",[39m
+[32m      "reason": "Claimed by scheduler-43128",[39m
+[32m      "timestamp": "2026-01-07T12:48:57.519Z",[39m
+[32m      "_id": "695e5639f7bf592f67dfaef7"[39m
+[32m    }[39m
+[32m  ],[39m
+[32m  "createdAt": "2026-01-07T12:48:57.508Z",[39m
+[32m  "updatedAt": "2026-01-07T12:48:57.520Z",[39m
+[32m  "__v": 0[39m
+[32m}[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m[Loader] Starting download for Job job-8ade40a0-fa56-40e5-9cde-a92c61d162b1[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: scripts/97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a.sh[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m[Loader] Streaming data to disk...[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m[Loader] Download complete. Verifying checksum...[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-8ade40a0-fa56-40e5-9cde-a92c61d162b1/payload.sh[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-8ade40a0-fa56-40e5-9cde-a92c61d162b1[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-8ade40a0-fa56-40e5-9cde-a92c61d162b1 -> /app[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:19:35:1935 [32minfo[39m: [32m⬇️ Image alpine:3.14 missing. Pulling...[39m
+2026-01-07 18:19:43:1943 [32minfo[39m: [32m✅ Pulled alpine:3.14[39m
+2026-01-07 18:19:50:1950 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-07 18:19:50:1950 [32minfo[39m: [32m[Executor] Logs captured (167 chars)[39m
+2026-01-07 18:19:50:1950 [32minfo[39m: [32m✅ Job job-8ade40a0-fa56-40e5-9cde-a92c61d162b1 COMPLETED[39m
+2026-01-07 18:26:56:2656 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 18:27:08:278 [32minfo[39m: [32mserver started[39m
+2026-01-07 18:27:08:278 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 18:27:42:2742 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 18:27:42:2742 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 18:27:42:2742 [32minfo[39m: [32m✅ Worker Connected to MongoDB[39m
+2026-01-07 18:28:31:2831 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab.py[39m
+2026-01-07 18:28:31:2831 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5.js[39m
+2026-01-07 18:28:31:2831 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a.sh[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m🔥 Claimed Job: job-6ebc0200-5a31-4a90-9c24-0d04181c1d12 (Type: TEST_JOB)[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m⚙️ Processing job-6ebc0200-5a31-4a90-9c24-0d04181c1d12[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m🔥 Claimed Job: job-3a086960-8aa6-4ea9-b320-c7a9616441d7 (Type: TEST_JOB)[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m🔥 Claimed Job: job-ae5838f2-a051-4c44-ab22-5c6bb6b997b4 (Type: TEST_JOB)[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32mjob: scripts/de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab.py[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m📦 Job Payload: {[39m
+[32m  "_id": "695e587779486bfd33696717",[39m
+[32m  "jobId": "job-6ebc0200-5a31-4a90-9c24-0d04181c1d12",[39m
+[32m  "type": "TEST_JOB",[39m
+[32m  "payload": {[39m
+[32m    "message": "Testing python:3.9"[39m
+[32m  },[39m
+[32m  "artifactUrl": "scripts/de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab.py",[39m
+[32m  "checksum": "de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab",[39m
+[32m  "state": "RUNNING",[39m
+[32m  "runAt": "2026-01-07T12:58:31.464Z",[39m
+[32m  "leaseExpireAt": "2026-01-07T13:03:33.321Z",[39m
+[32m  "leaseOwner": "scheduler-46837",[39m
+[32m  "attempt": 1,[39m
+[32m  "runtime": "python:3.9",[39m
+[32m  "dependencies": [[39m
+[32m    "requests"[39m
+[32m  ],[39m
+[32m  "history": [[39m
+[32m    {[39m
+[32m      "state": "PENDING",[39m
+[32m      "reason": "Job submitted via API",[39m
+[32m      "timestamp": "2026-01-07T12:58:31.465Z",[39m
+[32m      "_id": "695e587779486bfd33696718"[39m
+[32m    },[39m
+[32m    {[39m
+[32m      "state": "RUNNING",[39m
+[32m      "reason": "Claimed by scheduler-46837",[39m
+[32m      "timestamp": "2026-01-07T12:58:33.321Z",[39m
+[32m      "_id": "695e587979486bfd33696720"[39m
+[32m    }[39m
+[32m  ],[39m
+[32m  "createdAt": "2026-01-07T12:58:31.490Z",[39m
+[32m  "updatedAt": "2026-01-07T12:58:33.321Z",[39m
+[32m  "__v": 0[39m
+[32m}[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m[Loader] Starting download for Job job-6ebc0200-5a31-4a90-9c24-0d04181c1d12[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: scripts/de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab.py[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m[Loader] Streaming data to disk...[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m[Loader] Download complete. Verifying checksum...[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-6ebc0200-5a31-4a90-9c24-0d04181c1d12/payload.py[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-6ebc0200-5a31-4a90-9c24-0d04181c1d12[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-6ebc0200-5a31-4a90-9c24-0d04181c1d12 -> /app[39m
+2026-01-07 18:28:33:2833 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m[Executor] Logs captured (8071 chars)[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m✅ Job job-6ebc0200-5a31-4a90-9c24-0d04181c1d12 COMPLETED[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m⚙️ Processing job-3a086960-8aa6-4ea9-b320-c7a9616441d7[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32mjob: scripts/5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5.js[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m📦 Job Payload: {[39m
+[32m  "_id": "695e587779486bfd3369671a",[39m
+[32m  "jobId": "job-3a086960-8aa6-4ea9-b320-c7a9616441d7",[39m
+[32m  "type": "TEST_JOB",[39m
+[32m  "payload": {[39m
+[32m    "message": "Testing node:18"[39m
+[32m  },[39m
+[32m  "artifactUrl": "scripts/5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5.js",[39m
+[32m  "checksum": "5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5",[39m
+[32m  "state": "RUNNING",[39m
+[32m  "runAt": "2026-01-07T12:58:31.681Z",[39m
+[32m  "leaseExpireAt": "2026-01-07T13:03:33.337Z",[39m
+[32m  "leaseOwner": "scheduler-46837",[39m
+[32m  "attempt": 1,[39m
+[32m  "runtime": "node:18",[39m
+[32m  "dependencies": [[39m
+[32m    "axios"[39m
+[32m  ],[39m
+[32m  "history": [[39m
+[32m    {[39m
+[32m      "state": "PENDING",[39m
+[32m      "reason": "Job submitted via API",[39m
+[32m      "timestamp": "2026-01-07T12:58:31.681Z",[39m
+[32m      "_id": "695e587779486bfd3369671b"[39m
+[32m    },[39m
+[32m    {[39m
+[32m      "state": "RUNNING",[39m
+[32m      "reason": "Claimed by scheduler-46837",[39m
+[32m      "timestamp": "2026-01-07T12:58:33.337Z",[39m
+[32m      "_id": "695e587979486bfd33696724"[39m
+[32m    }[39m
+[32m  ],[39m
+[32m  "createdAt": "2026-01-07T12:58:31.685Z",[39m
+[32m  "updatedAt": "2026-01-07T12:58:33.337Z",[39m
+[32m  "__v": 0[39m
+[32m}[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m[Loader] Starting download for Job job-3a086960-8aa6-4ea9-b320-c7a9616441d7[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: scripts/5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5.js[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m[Loader] Streaming data to disk...[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m[Loader] Download complete. Verifying checksum...[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-3a086960-8aa6-4ea9-b320-c7a9616441d7/payload.js[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-3a086960-8aa6-4ea9-b320-c7a9616441d7[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-3a086960-8aa6-4ea9-b320-c7a9616441d7 -> /app[39m
+2026-01-07 18:28:56:2856 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 1[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32m[Executor] Logs captured (244 chars)[39m
+2026-01-07 18:29:03:293 [31merror[39m: [31m❌ Job job-3a086960-8aa6-4ea9-b320-c7a9616441d7 FAILED (Exit: 1)[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32m⚙️ Processing job-ae5838f2-a051-4c44-ab22-5c6bb6b997b4[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32mjob: scripts/97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a.sh[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32m📦 Job Payload: {[39m
+[32m  "_id": "695e587779486bfd3369671d",[39m
+[32m  "jobId": "job-ae5838f2-a051-4c44-ab22-5c6bb6b997b4",[39m
+[32m  "type": "TEST_JOB",[39m
+[32m  "payload": {[39m
+[32m    "message": "Testing bash"[39m
+[32m  },[39m
+[32m  "artifactUrl": "scripts/97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a.sh",[39m
+[32m  "checksum": "97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a",[39m
+[32m  "state": "RUNNING",[39m
+[32m  "runAt": "2026-01-07T12:58:31.923Z",[39m
+[32m  "leaseExpireAt": "2026-01-07T13:03:33.342Z",[39m
+[32m  "leaseOwner": "scheduler-46837",[39m
+[32m  "attempt": 1,[39m
+[32m  "runtime": "bash",[39m
+[32m  "dependencies": [],[39m
+[32m  "history": [[39m
+[32m    {[39m
+[32m      "state": "PENDING",[39m
+[32m      "reason": "Job submitted via API",[39m
+[32m      "timestamp": "2026-01-07T12:58:31.924Z",[39m
+[32m      "_id": "695e587779486bfd3369671e"[39m
+[32m    },[39m
+[32m    {[39m
+[32m      "state": "RUNNING",[39m
+[32m      "reason": "Claimed by scheduler-46837",[39m
+[32m      "timestamp": "2026-01-07T12:58:33.342Z",[39m
+[32m      "_id": "695e587979486bfd33696728"[39m
+[32m    }[39m
+[32m  ],[39m
+[32m  "createdAt": "2026-01-07T12:58:31.929Z",[39m
+[32m  "updatedAt": "2026-01-07T12:58:33.342Z",[39m
+[32m  "__v": 0[39m
+[32m}[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32m[Loader] Starting download for Job job-ae5838f2-a051-4c44-ab22-5c6bb6b997b4[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32m[Loader] Bucket: job-artifacts, Key: scripts/97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a.sh[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32m[Loader] Streaming data to disk...[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32m[Loader] Download complete. Verifying checksum...[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-ae5838f2-a051-4c44-ab22-5c6bb6b997b4/payload.sh[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-ae5838f2-a051-4c44-ab22-5c6bb6b997b4[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-ae5838f2-a051-4c44-ab22-5c6bb6b997b4 -> /app[39m
+2026-01-07 18:29:03:293 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:29:10:2910 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-07 18:29:10:2910 [32minfo[39m: [32m[Executor] Logs captured (167 chars)[39m
+2026-01-07 18:29:10:2910 [32minfo[39m: [32m✅ Job job-ae5838f2-a051-4c44-ab22-5c6bb6b997b4 COMPLETED[39m
+2026-01-07 18:30:20:3020 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 18:34:36:3436 [32minfo[39m: [32mserver started[39m
+2026-01-07 18:34:36:3436 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 18:34:46:3446 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 18:34:46:3446 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 18:34:46:3446 [32minfo[39m: [32m✅ Worker Connected to MongoDB[39m
+2026-01-07 18:35:08:358 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab.py[39m
+2026-01-07 18:35:09:359 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5.js[39m
+2026-01-07 18:35:09:359 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a.sh[39m
+2026-01-07 18:35:11:3511 [32minfo[39m: [32m🔥 Claimed Job: job-ac6c794e-64d6-4ad9-81c2-8e284931eebc (Type: TEST_JOB)[39m
+2026-01-07 18:35:11:3511 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:35:11:3511 [32minfo[39m: [32m⚙️ Processing job-ac6c794e-64d6-4ad9-81c2-8e284931eebc[39m
+2026-01-07 18:35:11:3511 [32minfo[39m: [32m🔥 Claimed Job: job-175f7025-5fbf-429a-9cec-d0c2bb07e9de (Type: TEST_JOB)[39m
+2026-01-07 18:35:11:3511 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:35:12:3512 [32minfo[39m: [32m🔥 Claimed Job: job-aaaf1c25-9e50-4bcc-8c54-af35f500320e (Type: TEST_JOB)[39m
+2026-01-07 18:35:12:3512 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:35:11:3511 [32minfo[39m: [32mjob: scripts/de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab.py[39m
+2026-01-07 18:35:11:3511 [32minfo[39m: [32mdeps: ["requests"][39m
+2026-01-07 18:35:11:3511 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:35:12:3512 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:35:12:3512 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-ac6c794e-64d6-4ad9-81c2-8e284931eebc/payload.py[39m
+2026-01-07 18:35:12:3512 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-ac6c794e-64d6-4ad9-81c2-8e284931eebc[39m
+2026-01-07 18:35:12:3512 [32minfo[39m: [32m[Executor] Dependency list -> ["requests"][39m
+2026-01-07 18:35:12:3512 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-ac6c794e-64d6-4ad9-81c2-8e284931eebc -> /app[39m
+2026-01-07 18:35:12:3512 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:35:27:3527 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-07 18:35:27:3527 [32minfo[39m: [32m[Executor] Logs captured (5598 chars)[39m
+2026-01-07 18:35:27:3527 [32minfo[39m: [32m✅ Job job-ac6c794e-64d6-4ad9-81c2-8e284931eebc COMPLETED[39m
+2026-01-07 18:35:27:3527 [32minfo[39m: [32m⚙️ Processing job-175f7025-5fbf-429a-9cec-d0c2bb07e9de[39m
+2026-01-07 18:35:27:3527 [32minfo[39m: [32mjob: scripts/5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5.js[39m
+2026-01-07 18:35:27:3527 [32minfo[39m: [32mdeps: ["axios"][39m
+2026-01-07 18:35:27:3527 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:35:27:3527 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:35:27:3527 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-175f7025-5fbf-429a-9cec-d0c2bb07e9de/payload.js[39m
+2026-01-07 18:35:27:3527 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-175f7025-5fbf-429a-9cec-d0c2bb07e9de[39m
+2026-01-07 18:35:27:3527 [32minfo[39m: [32m[Executor] Dependency list -> ["axios"][39m
+2026-01-07 18:35:27:3527 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-175f7025-5fbf-429a-9cec-d0c2bb07e9de -> /app[39m
+2026-01-07 18:35:27:3527 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:35:33:3533 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 1[39m
+2026-01-07 18:35:33:3533 [32minfo[39m: [32m[Executor] Logs captured (244 chars)[39m
+2026-01-07 18:35:33:3533 [31merror[39m: [31m❌ Job job-175f7025-5fbf-429a-9cec-d0c2bb07e9de FAILED (Exit: 1)[39m
+2026-01-07 18:35:33:3533 [32minfo[39m: [32m⚙️ Processing job-aaaf1c25-9e50-4bcc-8c54-af35f500320e[39m
+2026-01-07 18:35:33:3533 [32minfo[39m: [32mjob: scripts/97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a.sh[39m
+2026-01-07 18:35:33:3533 [32minfo[39m: [32mdeps: [][39m
+2026-01-07 18:35:33:3533 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:35:33:3533 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:35:33:3533 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-aaaf1c25-9e50-4bcc-8c54-af35f500320e/payload.sh[39m
+2026-01-07 18:35:33:3533 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-aaaf1c25-9e50-4bcc-8c54-af35f500320e[39m
+2026-01-07 18:35:33:3533 [32minfo[39m: [32m[Executor] Dependency list -> [][39m
+2026-01-07 18:35:33:3533 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-aaaf1c25-9e50-4bcc-8c54-af35f500320e -> /app[39m
+2026-01-07 18:35:33:3533 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:35:42:3542 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-07 18:35:42:3542 [32minfo[39m: [32m[Executor] Logs captured (167 chars)[39m
+2026-01-07 18:35:42:3542 [32minfo[39m: [32m✅ Job job-aaaf1c25-9e50-4bcc-8c54-af35f500320e COMPLETED[39m
+2026-01-07 18:44:01:441 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 18:44:09:449 [32minfo[39m: [32mserver started[39m
+2026-01-07 18:44:09:449 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 18:45:28:4528 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab.py[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5.js[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a.sh[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32m🔥 Claimed Job: job-122d23ad-3bff-407a-8cce-e222a0e642d8 (Type: TEST_JOB)[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32m⚙️ Processing job-122d23ad-3bff-407a-8cce-e222a0e642d8[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32m🔥 Claimed Job: job-d7b8d266-d4b5-4c66-9fb4-f2cce9a2ae42 (Type: TEST_JOB)[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32mjob: scripts/de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab.py[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32mdeps: ["requests"][39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32m🔥 Claimed Job: job-7eec0b14-7a0a-4a63-b92f-bda80b298bc8 (Type: TEST_JOB)[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-122d23ad-3bff-407a-8cce-e222a0e642d8/payload.py[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-122d23ad-3bff-407a-8cce-e222a0e642d8[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32m[Executor] Dependency list -> ["requests"][39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-122d23ad-3bff-407a-8cce-e222a0e642d8 -> /app[39m
+2026-01-07 18:45:29:4529 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:45:49:4549 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-07 18:45:49:4549 [32minfo[39m: [32m[Executor] Logs captured (7140 chars)[39m
+2026-01-07 18:45:49:4549 [32minfo[39m: [32m✅ Job job-122d23ad-3bff-407a-8cce-e222a0e642d8 COMPLETED[39m
+2026-01-07 18:45:49:4549 [32minfo[39m: [32m⚙️ Processing job-d7b8d266-d4b5-4c66-9fb4-f2cce9a2ae42[39m
+2026-01-07 18:45:49:4549 [32minfo[39m: [32mjob: scripts/5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5.js[39m
+2026-01-07 18:45:49:4549 [32minfo[39m: [32mdeps: ["axios"][39m
+2026-01-07 18:45:49:4549 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:45:49:4549 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:45:49:4549 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-d7b8d266-d4b5-4c66-9fb4-f2cce9a2ae42/payload.js[39m
+2026-01-07 18:45:49:4549 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-d7b8d266-d4b5-4c66-9fb4-f2cce9a2ae42[39m
+2026-01-07 18:45:49:4549 [32minfo[39m: [32m[Executor] Dependency list -> ["axios"][39m
+2026-01-07 18:45:49:4549 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-d7b8d266-d4b5-4c66-9fb4-f2cce9a2ae42 -> /app[39m
+2026-01-07 18:45:49:4549 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:45:58:4558 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 1[39m
+2026-01-07 18:45:58:4558 [32minfo[39m: [32m[Executor] Logs captured (244 chars)[39m
+2026-01-07 18:45:58:4558 [31merror[39m: [31m❌ Job job-d7b8d266-d4b5-4c66-9fb4-f2cce9a2ae42 FAILED (Exit: 1)[39m
+2026-01-07 18:45:58:4558 [32minfo[39m: [32m⚙️ Processing job-7eec0b14-7a0a-4a63-b92f-bda80b298bc8[39m
+2026-01-07 18:45:58:4558 [32minfo[39m: [32mjob: scripts/97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a.sh[39m
+2026-01-07 18:45:58:4558 [32minfo[39m: [32mdeps: [][39m
+2026-01-07 18:45:58:4558 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:45:58:4558 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:45:58:4558 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-7eec0b14-7a0a-4a63-b92f-bda80b298bc8/payload.sh[39m
+2026-01-07 18:45:58:4558 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-7eec0b14-7a0a-4a63-b92f-bda80b298bc8[39m
+2026-01-07 18:45:58:4558 [32minfo[39m: [32m[Executor] Dependency list -> [][39m
+2026-01-07 18:45:58:4558 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-7eec0b14-7a0a-4a63-b92f-bda80b298bc8 -> /app[39m
+2026-01-07 18:45:58:4558 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:46:04:464 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-07 18:46:04:464 [32minfo[39m: [32m[Executor] Logs captured (167 chars)[39m
+2026-01-07 18:46:04:464 [32minfo[39m: [32m✅ Job job-7eec0b14-7a0a-4a63-b92f-bda80b298bc8 COMPLETED[39m
+2026-01-07 18:50:49:5049 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-07 18:51:50:5150 [32minfo[39m: [32mserver started[39m
+2026-01-07 18:51:50:5150 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 18:52:17:5217 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-07 18:52:17:5217 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-07 18:52:17:5217 [32minfo[39m: [32m✅ Worker Connected to MongoDB[39m
+2026-01-07 18:52:38:5238 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab.py[39m
+2026-01-07 18:52:38:5238 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5.js[39m
+2026-01-07 18:52:38:5238 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a.sh[39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32m🔥 Claimed Job: job-eabcfabb-d82d-4d1d-be69-bd71ec12f4e7 (Type: TEST_JOB)[39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32m⚙️ Processing job-eabcfabb-d82d-4d1d-be69-bd71ec12f4e7[39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32m🔥 Claimed Job: job-a2d2f17c-619d-44a3-b75d-aa18664abb9a (Type: TEST_JOB)[39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32m🔥 Claimed Job: job-b9f94157-0ee6-4fc4-9edd-73d5c656b62d (Type: TEST_JOB)[39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32mPushed job[39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32mjob: scripts/de6b0a215561a6d0baf7e628de527ad00da44ecb56c916c6e7a51b61278ae2ab.py[39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32mdeps: ["requests"][39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-eabcfabb-d82d-4d1d-be69-bd71ec12f4e7/payload.py[39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-eabcfabb-d82d-4d1d-be69-bd71ec12f4e7[39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32m[Executor] Dependency list -> ["requests"][39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-eabcfabb-d82d-4d1d-be69-bd71ec12f4e7 -> /app[39m
+2026-01-07 18:52:40:5240 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:52:57:5257 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-07 18:52:57:5257 [32minfo[39m: [32m[Executor] Logs captured (9073 chars)[39m
+2026-01-07 18:52:57:5257 [32minfo[39m: [32m✅ Job job-eabcfabb-d82d-4d1d-be69-bd71ec12f4e7 COMPLETED[39m
+2026-01-07 18:52:57:5257 [32minfo[39m: [32m⚙️ Processing job-a2d2f17c-619d-44a3-b75d-aa18664abb9a[39m
+2026-01-07 18:52:57:5257 [32minfo[39m: [32mjob: scripts/5651fb7b176fc0a2bf14fcb7fee205eaa8af697c6e6a3de679decc8af30dc3b5.js[39m
+2026-01-07 18:52:57:5257 [32minfo[39m: [32mdeps: ["axios"][39m
+2026-01-07 18:52:57:5257 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:52:57:5257 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:52:57:5257 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-a2d2f17c-619d-44a3-b75d-aa18664abb9a/payload.js[39m
+2026-01-07 18:52:57:5257 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-a2d2f17c-619d-44a3-b75d-aa18664abb9a[39m
+2026-01-07 18:52:57:5257 [32minfo[39m: [32m[Executor] Dependency list -> ["axios"][39m
+2026-01-07 18:52:57:5257 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-a2d2f17c-619d-44a3-b75d-aa18664abb9a -> /app[39m
+2026-01-07 18:52:57:5257 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:53:16:5316 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-07 18:53:16:5316 [32minfo[39m: [32m[Executor] Logs captured (1402 chars)[39m
+2026-01-07 18:53:16:5316 [32minfo[39m: [32m✅ Job job-a2d2f17c-619d-44a3-b75d-aa18664abb9a COMPLETED[39m
+2026-01-07 18:53:16:5316 [32minfo[39m: [32m⚙️ Processing job-b9f94157-0ee6-4fc4-9edd-73d5c656b62d[39m
+2026-01-07 18:53:16:5316 [32minfo[39m: [32mjob: scripts/97957c933a4b2804ceea204de60959b9c6153ded1fbef60c453ea96d36c0c86a.sh[39m
+2026-01-07 18:53:16:5316 [32minfo[39m: [32mdeps: [][39m
+2026-01-07 18:53:16:5316 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-07 18:53:16:5316 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-07 18:53:16:5316 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-b9f94157-0ee6-4fc4-9edd-73d5c656b62d/payload.sh[39m
+2026-01-07 18:53:16:5316 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-b9f94157-0ee6-4fc4-9edd-73d5c656b62d[39m
+2026-01-07 18:53:16:5316 [32minfo[39m: [32m[Executor] Dependency list -> [][39m
+2026-01-07 18:53:16:5316 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-b9f94157-0ee6-4fc4-9edd-73d5c656b62d -> /app[39m
+2026-01-07 18:53:16:5316 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-07 18:53:21:5321 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-07 18:53:21:5321 [32minfo[39m: [32m[Executor] Logs captured (167 chars)[39m
+2026-01-07 18:53:21:5321 [32minfo[39m: [32m✅ Job job-b9f94157-0ee6-4fc4-9edd-73d5c656b62d COMPLETED[39m
+2026-01-07 18:54:38:5438 [32minfo[39m: [32mHTTP server closed successfully.[39m

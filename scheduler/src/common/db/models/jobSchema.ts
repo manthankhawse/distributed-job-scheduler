@@ -23,7 +23,9 @@ export interface IJob extends mongoose.Document {
     completedAt?: Date;
     logs?: string;
     attempt: number;
+    runtime: string;
     history: IJobHistory[]
+    dependencies?: string[];
     createdAt: Date;
     updatedAt: Date;
 }
@@ -74,9 +76,24 @@ const jobSchema = new Schema<IJob>(
             type: Number,
             default: 0
         },
-        exitCode: { type: Number },
-        logs: { type: String },
-        completedAt: { type: Date },
+        exitCode: { 
+            type: Number 
+        },
+        logs: { 
+            type: String 
+        },
+        completedAt: { 
+            type: Date 
+        },
+        runtime: { 
+            type: String, 
+            required: true, 
+            default: "python:3.9" 
+        },
+        dependencies:{
+            type: [String],
+            default: []
+        },
         history: {
             type: [{
                 state: { type: String, required: true },

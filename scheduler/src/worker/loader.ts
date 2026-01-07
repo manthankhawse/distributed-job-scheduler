@@ -4,19 +4,21 @@ import fs from 'fs';
 import path from "path";
 import crypto from 'crypto';
 import logger from "../common/logger";
+import { RUNTIMES } from "../common/runtimes";
 
-export const downloadAndVerify = async (jobId: string, s3Key: string, expectedChecksum: string) => {
+export const downloadAndVerify = async (jobId: string, s3Key: string, expectedChecksum: string, runtime: string) : Promise<{jobDir: string, fileName: string}> => {
     const jobDir = path.join('/tmp', 'scheduler-jobs', jobId);
-    
-    // DEBUG LOG
-    logger.info(`[Loader] Starting download for Job ${jobId}`);
-    logger.info(`[Loader] Bucket: ${BUCKET_NAME}, Key: ${s3Key}`);
     
     if (!fs.existsSync(jobDir)) {
         fs.mkdirSync(jobDir, { recursive: true });
     }
 
-    const localPath = path.join(jobDir, 'payload.py');
+    const config = RUNTIMES[runtime] || RUNTIMES['python:3.9'];
+    if(!config){
+        throw new Error();
+    }
+    const ext = config.extension;
+    const localPath = path.join(jobDir, `payload${ext}`);
 
     try {
         logger.info(`[Loader] Sending S3 Request...`);
@@ -34,8 +36,6 @@ export const downloadAndVerify = async (jobId: string, s3Key: string, expectedCh
 
         const fileWriterStream = fs.createWriteStream(localPath);
         const hash = crypto.createHash('sha256');
-
-        logger.info(`[Loader] Streaming data to disk...`);
         
         // @ts-ignore
         for await (const chunk of response.Body) {
@@ -45,7 +45,6 @@ export const downloadAndVerify = async (jobId: string, s3Key: string, expectedCh
         fileWriterStream.end();
 
         const calculatedCheckSum = hash.digest('hex');
-        logger.info(`[Loader] Download complete. Verifying checksum...`);
 
         if (calculatedCheckSum !== expectedChecksum) {
             logger.error(`🚨 SECURITY ALERT: Checksum mismatch!`);
@@ -56,7 +55,7 @@ export const downloadAndVerify = async (jobId: string, s3Key: string, expectedCh
         }
 
         logger.info(`✅ [Loader] Verified & Downloaded: ${localPath}`);
-        return jobDir;
+        return {jobDir, fileName: `payload${ext}`};
 
     } catch (err) {
         logger.error(`❌ [Loader] Failed:`, err);

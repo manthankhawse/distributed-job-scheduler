@@ -5,6 +5,7 @@ import { BUCKET_NAME, s3Client } from "../../common/s3/s3Client";
 import { PutObjectCommand } from "@aws-sdk/client-s3";
 import Job from "../../common/db/models/jobSchema";
 import logger from "../../common/logger";
+import { RUNTIMES } from "../../common/runtimes";
 
 const upload = multer({ storage: multer.memoryStorage() });
 
@@ -17,7 +18,13 @@ export const submitJob = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    const { type, runAt, payload } = req.body;
+    const { type, runAt, payload, dependencies, runtime } = req.body;
+
+    const config = RUNTIMES[runtime] || RUNTIMES['python:3.9'];
+    if(!config){
+      throw new Error();
+    }
+    const ext = config.extension;
 
     const fileBuffer = req.file.buffer;
 
@@ -25,13 +32,12 @@ export const submitJob = async (req: Request, res: Response): Promise<void> => {
     hashSum.update(fileBuffer);
     const checksum = hashSum.digest('hex');
 
-    const s3Key = `scripts/${checksum}.py`;
+    const s3Key = `scripts/${checksum}${ext}`;
 
     await s3Client.send(new PutObjectCommand({
       Bucket: BUCKET_NAME,
       Key: s3Key,
       Body: fileBuffer,
-      ContentType: 'text/x-python'
     }));
 
 
@@ -39,15 +45,30 @@ export const submitJob = async (req: Request, res: Response): Promise<void> => {
 
     const jobId = `job-${crypto.randomUUID()}`;
 
+    let parsedDependencies: string[] = [];
+        if (dependencies) {
+            try {
+                if (typeof dependencies === 'string') {
+                    parsedDependencies = JSON.parse(dependencies);
+                } else if (Array.isArray(dependencies)) {
+                    parsedDependencies = dependencies;
+                }
+            } catch (e) {
+                console.warn("Could not parse dependencies, defaulting to empty array");
+                parsedDependencies = [];
+            }
+        }
+
     const job = await Job.create({
       jobId: jobId,
       type: type || 'GENERIC_SCRIPT',
       state: 'PENDING',
-      runAt: runAt ? new Date(runAt) : new Date(), // Default to now
+      runAt: runAt ? new Date(runAt) : new Date(),
       payload: payload ? JSON.parse(payload) : {},
       artifactUrl : s3Key,
       checksum: checksum,
-
+      runtime,
+      dependencies: parsedDependencies || [], 
       history: [{
         state: 'PENDING',
         reason: 'Job submitted via API',
