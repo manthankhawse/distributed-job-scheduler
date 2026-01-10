@@ -5,8 +5,11 @@ import { Server } from 'http';
 import connectDB from '../common/db/connectDB';
 import startPolling from '../scheduler/poller';
 import jobRoutes from './routes/jobRoutes';
+import cors from 'cors';
 
 const app: Express = express();
+
+app.use(cors());
 
 connectDB();
 

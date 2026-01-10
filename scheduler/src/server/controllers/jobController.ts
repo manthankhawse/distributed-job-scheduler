@@ -84,7 +84,51 @@ export const submitJob = async (req: Request, res: Response): Promise<void> => {
     });
 
   } catch (error) {
-    console.error(error);
+    logger.error(error);
     res.status(500).json({ error: "internal error" });
   }
 };
+
+
+export const getJobById = async (req: Request, res: Response) : Promise<void> => {
+  const {id} = req.params;
+  if (!id) {
+    res.status(400).json({ error: "missing id param" });
+    return;
+  }
+
+  try {
+    const job = await Job.find({jobId: id});
+    if(!job){
+      res.status(400).json({
+        success: false,
+        message: 'job not found'
+      })
+    }
+    res.status(201).json({
+      success: true,
+      job
+    });
+
+  } catch (error) {
+    logger.error(error);
+    res.status(500).json({ error: "internal error" });
+  }
+}
+
+
+
+export const getJobs = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const jobs = await Job.find({});
+    res.status(201).json({
+      success: true,
+      jobs
+    });
+
+  } catch (error) {
+    logger.error(error);
+    res.status(500).json({ error: "internal error" });
+  }
+};
+

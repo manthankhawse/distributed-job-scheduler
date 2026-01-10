@@ -12521,3 +12521,125 @@
 2026-01-07 18:53:21:5321 [32minfo[39m: [32m[Executor] Logs captured (167 chars)[39m
 2026-01-07 18:53:21:5321 [32minfo[39m: [32m✅ Job job-b9f94157-0ee6-4fc4-9edd-73d5c656b62d COMPLETED[39m
 2026-01-07 18:54:38:5438 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-08 11:54:56:5456 [32minfo[39m: [32mserver started[39m
+2026-01-08 11:54:56:5456 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-08 11:54:58:5458 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-08 11:54:58:5458 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-08 11:54:58:5458 [32minfo[39m: [32m✅ Worker Connected to MongoDB[39m
+2026-01-08 11:58:46:5846 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/494ac2d0e1a67cc69d0f54c1b672e4a1936dbed6f802be3e1ef59a73b9e9cc3e.js[39m
+2026-01-08 11:58:51:5851 [32minfo[39m: [32m🔥 Claimed Job: job-49239c66-52bd-4e70-b694-0b6ce7b0f973 (Type: SDK_JOB)[39m
+2026-01-08 11:58:51:5851 [32minfo[39m: [32mPushed job[39m
+2026-01-08 11:58:51:5851 [32minfo[39m: [32m⚙️ Processing job-49239c66-52bd-4e70-b694-0b6ce7b0f973[39m
+2026-01-08 11:58:51:5851 [32minfo[39m: [32mjob: scripts/494ac2d0e1a67cc69d0f54c1b672e4a1936dbed6f802be3e1ef59a73b9e9cc3e.js[39m
+2026-01-08 11:58:51:5851 [32minfo[39m: [32mdeps: ["axios"][39m
+2026-01-08 11:58:51:5851 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-08 11:58:51:5851 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-08 11:58:51:5851 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-49239c66-52bd-4e70-b694-0b6ce7b0f973/payload.js[39m
+2026-01-08 11:58:51:5851 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-49239c66-52bd-4e70-b694-0b6ce7b0f973[39m
+2026-01-08 11:58:51:5851 [32minfo[39m: [32m[Executor] Dependency list -> ["axios"][39m
+2026-01-08 11:58:51:5851 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-49239c66-52bd-4e70-b694-0b6ce7b0f973 -> /app[39m
+2026-01-08 11:58:51:5851 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-08 11:59:01:591 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-08 11:59:01:591 [32minfo[39m: [32m[Executor] Logs captured (938 chars)[39m
+2026-01-08 11:59:01:591 [32minfo[39m: [32m✅ Job job-49239c66-52bd-4e70-b694-0b6ce7b0f973 COMPLETED[39m
+2026-01-08 12:56:20:5620 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-08 21:51:48:5148 [32minfo[39m: [32mserver started[39m
+2026-01-08 21:51:48:5148 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-08 21:51:51:5151 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-08 21:51:52:5152 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-08 21:51:52:5152 [32minfo[39m: [32m✅ Worker Connected to MongoDB[39m
+2026-01-08 21:53:42:5342 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/51931930f6f6a6aad1bc17200ecf54db6cfc229cf8412b44856fb7ff65b84365.js[39m
+2026-01-08 21:53:43:5343 [32minfo[39m: [32m🔥 Claimed Job: job-e26577b9-b590-47a3-9baf-10dc899928e4 (Type: SDK_JOB)[39m
+2026-01-08 21:53:43:5343 [32minfo[39m: [32mPushed job[39m
+2026-01-08 21:53:43:5343 [32minfo[39m: [32m⚙️ Processing job-e26577b9-b590-47a3-9baf-10dc899928e4[39m
+2026-01-08 21:53:43:5343 [32minfo[39m: [32mjob: scripts/51931930f6f6a6aad1bc17200ecf54db6cfc229cf8412b44856fb7ff65b84365.js[39m
+2026-01-08 21:53:43:5343 [32minfo[39m: [32mdeps: ["axios"][39m
+2026-01-08 21:53:43:5343 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-08 21:53:43:5343 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-08 21:53:43:5343 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-e26577b9-b590-47a3-9baf-10dc899928e4/payload.js[39m
+2026-01-08 21:53:43:5343 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-e26577b9-b590-47a3-9baf-10dc899928e4[39m
+2026-01-08 21:53:43:5343 [32minfo[39m: [32m[Executor] Dependency list -> ["axios"][39m
+2026-01-08 21:53:43:5343 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-e26577b9-b590-47a3-9baf-10dc899928e4 -> /app[39m
+2026-01-08 21:53:43:5343 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-08 21:53:57:5357 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 1[39m
+2026-01-08 21:53:57:5357 [32minfo[39m: [32m[Executor] Logs captured (1432 chars)[39m
+2026-01-08 21:53:57:5357 [31merror[39m: [31m❌ Job job-e26577b9-b590-47a3-9baf-10dc899928e4 FAILED (Exit: 1)[39m
+2026-01-08 21:56:05:565 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-08 21:56:30:5630 [32minfo[39m: [32mserver started[39m
+2026-01-08 21:56:30:5630 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-08 21:56:41:5641 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-08 21:56:41:5641 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-08 21:56:41:5641 [32minfo[39m: [32m✅ Worker Connected to MongoDB[39m
+2026-01-08 21:57:10:5710 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/51931930f6f6a6aad1bc17200ecf54db6cfc229cf8412b44856fb7ff65b84365.js[39m
+2026-01-08 21:57:10:5710 [32minfo[39m: [32m🔥 Claimed Job: job-9e543edd-35ad-43da-9942-13c7d91198be (Type: SDK_JOB)[39m
+2026-01-08 21:57:10:5710 [32minfo[39m: [32m⚙️ Processing job-9e543edd-35ad-43da-9942-13c7d91198be[39m
+2026-01-08 21:57:10:5710 [32minfo[39m: [32mPushed job[39m
+2026-01-08 21:57:10:5710 [32minfo[39m: [32mjob: scripts/51931930f6f6a6aad1bc17200ecf54db6cfc229cf8412b44856fb7ff65b84365.js[39m
+2026-01-08 21:57:10:5710 [32minfo[39m: [32mdeps: ["axios"][39m
+2026-01-08 21:57:10:5710 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-08 21:57:10:5710 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-08 21:57:10:5710 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-9e543edd-35ad-43da-9942-13c7d91198be/payload.js[39m
+2026-01-08 21:57:10:5710 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-9e543edd-35ad-43da-9942-13c7d91198be[39m
+2026-01-08 21:57:10:5710 [32minfo[39m: [32m[Executor] Dependency list -> ["axios"][39m
+2026-01-08 21:57:10:5710 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-9e543edd-35ad-43da-9942-13c7d91198be -> /app[39m
+2026-01-08 21:57:10:5710 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-08 21:57:20:5720 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 1[39m
+2026-01-08 21:57:20:5720 [32minfo[39m: [32m[Executor] Logs captured (1594 chars)[39m
+2026-01-08 21:57:20:5720 [31merror[39m: [31m❌ Job job-9e543edd-35ad-43da-9942-13c7d91198be FAILED (Exit: 1)[39m
+2026-01-08 22:00:07:07 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-08 22:00:20:020 [32minfo[39m: [32mserver started[39m
+2026-01-08 22:00:20:020 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-08 22:00:22:022 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-08 22:00:22:022 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-08 22:00:22:022 [32minfo[39m: [32m✅ Worker Connected to MongoDB[39m
+2026-01-08 22:00:47:047 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/c601c80bc0f858599109588db7f5465c47e88a9affea299b452d904dedec6a46.js[39m
+2026-01-08 22:00:50:050 [32minfo[39m: [32m🔥 Claimed Job: job-34c4902c-0730-4fc0-80bd-8cba0dc01a67 (Type: SDK_JOB)[39m
+2026-01-08 22:00:50:050 [32minfo[39m: [32m⚙️ Processing job-34c4902c-0730-4fc0-80bd-8cba0dc01a67[39m
+2026-01-08 22:00:50:050 [32minfo[39m: [32mPushed job[39m
+2026-01-08 22:00:50:050 [32minfo[39m: [32mjob: scripts/c601c80bc0f858599109588db7f5465c47e88a9affea299b452d904dedec6a46.js[39m
+2026-01-08 22:00:50:050 [32minfo[39m: [32mdeps: ["axios"][39m
+2026-01-08 22:00:50:050 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-08 22:00:50:050 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-08 22:00:50:050 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-34c4902c-0730-4fc0-80bd-8cba0dc01a67/payload.js[39m
+2026-01-08 22:00:50:050 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-34c4902c-0730-4fc0-80bd-8cba0dc01a67[39m
+2026-01-08 22:00:50:050 [32minfo[39m: [32m[Executor] Dependency list -> ["axios"][39m
+2026-01-08 22:00:50:050 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-34c4902c-0730-4fc0-80bd-8cba0dc01a67 -> /app[39m
+2026-01-08 22:00:50:050 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-08 22:01:02:12 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-08 22:01:02:12 [32minfo[39m: [32m[Executor] Logs captured (1073 chars)[39m
+2026-01-08 22:01:02:12 [32minfo[39m: [32m✅ Job job-34c4902c-0730-4fc0-80bd-8cba0dc01a67 COMPLETED[39m
+2026-01-08 22:01:43:143 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-08 23:12:23:1223 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-08 23:12:24:1224 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-08 23:12:24:1224 [32minfo[39m: [32m✅ Worker Connected to MongoDB[39m
+2026-01-08 23:12:33:1233 [32minfo[39m: [32mserver started[39m
+2026-01-08 23:12:33:1233 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-08 23:12:46:1246 [32minfo[39m: [32m☁️ Uploaded artifact to MinIO: scripts/494ac2d0e1a67cc69d0f54c1b672e4a1936dbed6f802be3e1ef59a73b9e9cc3e.js[39m
+2026-01-08 23:12:48:1248 [32minfo[39m: [32m🔥 Claimed Job: job-58d6a646-b57a-433c-b449-70d0208202f0 (Type: SDK_JOB)[39m
+2026-01-08 23:12:48:1248 [32minfo[39m: [32mPushed job[39m
+2026-01-08 23:12:48:1248 [32minfo[39m: [32m⚙️ Processing job-58d6a646-b57a-433c-b449-70d0208202f0[39m
+2026-01-08 23:12:48:1248 [32minfo[39m: [32mjob: scripts/494ac2d0e1a67cc69d0f54c1b672e4a1936dbed6f802be3e1ef59a73b9e9cc3e.js[39m
+2026-01-08 23:12:48:1248 [32minfo[39m: [32mdeps: ["axios"][39m
+2026-01-08 23:12:48:1248 [32minfo[39m: [32m[Loader] Sending S3 Request...[39m
+2026-01-08 23:12:48:1248 [32minfo[39m: [32m[Loader] S3 Response Received (Status: 200)[39m
+2026-01-08 23:12:48:1248 [32minfo[39m: [32m✅ [Loader] Verified & Downloaded: /tmp/scheduler-jobs/job-58d6a646-b57a-433c-b449-70d0208202f0/payload.js[39m
+2026-01-08 23:12:48:1248 [32minfo[39m: [32m[Executor] Preparing to spawn container for job-58d6a646-b57a-433c-b449-70d0208202f0[39m
+2026-01-08 23:12:48:1248 [32minfo[39m: [32m[Executor] Dependency list -> ["axios"][39m
+2026-01-08 23:12:48:1248 [32minfo[39m: [32m[Executor] Mounting: /tmp/scheduler-jobs/job-58d6a646-b57a-433c-b449-70d0208202f0 -> /app[39m
+2026-01-08 23:12:48:1248 [32minfo[39m: [32m[Executor] Docker Request: Creating container...[39m
+2026-01-08 23:13:05:135 [32minfo[39m: [32m[Executor] Container finished. Exit Code: 0[39m
+2026-01-08 23:13:05:135 [32minfo[39m: [32m[Executor] Logs captured (1019 chars)[39m
+2026-01-08 23:13:05:135 [32minfo[39m: [32m✅ Job job-58d6a646-b57a-433c-b449-70d0208202f0 COMPLETED[39m
+2026-01-08 23:13:17:1317 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-09 19:21:45:2145 [32minfo[39m: [32mserver started[39m
+2026-01-09 19:21:45:2145 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-09 19:21:46:2146 [32minfo[39m: [32m👷 Worker started. Polling Redis...[39m
+2026-01-09 19:21:46:2146 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-09 19:21:46:2146 [32minfo[39m: [32m✅ Worker Connected to MongoDB[39m
+2026-01-09 19:28:00:280 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-09 19:28:14:2814 [32minfo[39m: [32mserver started[39m
+2026-01-09 19:28:14:2814 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-09 20:00:04:04 [32minfo[39m: [32mHTTP server closed successfully.[39m
+2026-01-09 20:00:30:030 [32minfo[39m: [32mserver started[39m
+2026-01-09 20:00:30:030 [32minfo[39m: [32m✅ Connected to MongoDB[39m
+2026-01-09 20:07:40:740 [32minfo[39m: [32mHTTP server closed successfully.[39m
