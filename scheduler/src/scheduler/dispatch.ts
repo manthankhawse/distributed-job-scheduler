@@ -1,4 +1,3 @@
-import { IJob } from "../common/db/models/jobSchema";
 import {Redis} from 'ioredis';
 import logger from "../common/logger";
 import dotenv from 'dotenv';

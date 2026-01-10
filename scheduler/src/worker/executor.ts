@@ -60,7 +60,8 @@ export const executeContainer = async (
                 HostConfig: {
                     Binds: [`${hostMountPath}:/app:rw`],
                     AutoRemove: true,
-                }
+                },
+                Tty: true
             }
         );
 

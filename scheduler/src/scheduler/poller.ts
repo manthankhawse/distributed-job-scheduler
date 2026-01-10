@@ -4,11 +4,13 @@ import { pickNextJob } from "./jobService";
 import dotenv from 'dotenv';
 import { recoverCrashedJobs } from "./recovery";
 import { dispatch, isQueueFull } from "./dispatch";
+import transitionState from "../common/stateMachine";
+import crypto from 'crypto';
 
 dotenv.config();
 
 const startPolling = ()=>{
-    const SCHEDULER_ID = `scheduler-${process.pid}`
+    const SCHEDULER_ID = `scheduler-${crypto.randomUUID().slice(0, 8)}`;
     const POLLING_INTERVAL = Number(process.env.POLLING_INTERVAL as string);
 
     const poll = async ()=>{
@@ -23,7 +25,9 @@ const startPolling = ()=>{
 
             if(job){
                 logger.info(`🔥 Claimed Job: ${job.jobId} (Type: ${job.type})`);
-                dispatch(job);
+                transitionState(job, 'QUEUED', `Dispatched by ${SCHEDULER_ID}`);
+                await job.save();
+                await dispatch(job);
                 setImmediate(poll);
             }else{
                 const endTime = process.hrtime.bigint();
@@ -40,14 +44,14 @@ const startPolling = ()=>{
         }
     }   
 
-    const startRecoveryLoop = () => {
-        setInterval(async () => {
-            try {
-                await recoverCrashedJobs();
-            } catch (err) {
-                logger.error("Error in recovery loop ", err);
-            }
-        }, 60 * 1000);
+    const startRecoveryLoop = async () => {
+        try {
+            await recoverCrashedJobs();
+        } catch (err) {
+            logger.error("❌ Recovery loop error: ", err);
+        } finally { 
+            setTimeout(startRecoveryLoop, 60 * 1000);
+        }
     };
 
     poll();
