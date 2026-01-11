@@ -58,6 +58,7 @@ const processJobs = async () => {
 
             let exitCode = 1;
             let logs = "";
+            let output = null;
             let jobDir = "";
 
             try {
@@ -80,6 +81,7 @@ const processJobs = async () => {
 
                 exitCode = executionResult.exitCode;
                 logs = executionResult.logs;
+                output = executionResult.output;
 
             } catch (execError: any) {
                 logger.error(`❌ Execution Crash for ${jobId}: ${execError.message}`);
@@ -100,6 +102,9 @@ const processJobs = async () => {
 
                 if (finalState === 'COMPLETED') {
                     logger.info(`✅ Job ${job.jobId} COMPLETED`);
+                    if (output) {
+                        job.output = output; // Make sure your JobSchema has this field!
+                    }
                     transitionState(job, 'COMPLETED', "Job finished successfully", { 
                         logs, 
                         exitCode 

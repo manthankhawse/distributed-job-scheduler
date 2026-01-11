@@ -27,6 +27,7 @@ const AttemptSchema = new Schema<IAttempt>({
         timestamp: { type: Date, default: Date.now },
         message: String 
     }],
+    
     finalStatus: { 
         type: String, 
         enum: ['PENDING', 'RUNNING', 'COMPLETED', 'FAILED', 'QUEUED'],
@@ -49,7 +50,7 @@ export interface IJob extends mongoose.Document {
     state: STATE;
     runAt: Date;
     attempt: number;       
-    
+    output?: any;
     leaseOwner?: string | undefined;
     leaseExpireAt?: Date | undefined;
     
@@ -133,6 +134,7 @@ const jobSchema = new Schema<IJob>(
             type: [String],
             default: []
         },
+        output: { type: Schema.Types.Mixed },
         attempts: {
             type: [AttemptSchema],
             default: []

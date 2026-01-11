@@ -3,8 +3,9 @@ import JobModel from '../common/db/models/jobSchema';
 import { dispatch } from './dispatch'; 
 import logger from '../common/logger';
 import crypto from 'crypto';
-import { PutObjectCommand } from '@aws-sdk/client-s3';
+import { HeadObjectCommand, PutObjectCommand } from '@aws-sdk/client-s3';
 import { s3Client, BUCKET_NAME } from '../common/s3/s3Client'; // 👈 Import your client
+import { wrapCode } from '../common/codeWrapper';
 
 const ORCHESTRATOR_INTERVAL = 2000;
 
@@ -55,6 +56,13 @@ const processWorkflow = async (wf: IWorkflow) => {
                     // Success!
                     nodeState.status = 'COMPLETED';
                     nodeState.completedAt = new Date();
+
+                    if (job.output) {
+                        logger.info(`💾 Merging output from ${node.id} into Context`);
+                        wf.context = { ...wf.context, ...job.output };
+                        wf.markModified('context'); 
+                    }
+
                     workflowModified = true;
                     const startTime = nodeState.startedAt 
                         ? new Date(nodeState.startedAt).getTime() 
@@ -65,6 +73,8 @@ const processWorkflow = async (wf: IWorkflow) => {
                         nodeId: node.id,
                         details: `Finished in ${(Date.now() - startTime) / 1000}s`
                     });
+
+
                 } else if (job.state === 'FAILED') {
                     // 🛑 The Job ran out of retries (e.g. 3/3 failed)
                     nodeState.status = 'FAILED';
@@ -101,7 +111,7 @@ const processWorkflow = async (wf: IWorkflow) => {
                 
                 
                 try {
-                    const jobId = await triggerJobWithS3(node, wf.workflowId);
+                    const jobId = await triggerJobWithS3(node, wf.workflowId, wf.context);
                     
                     nodeState.status = 'RUNNING';
                     nodeState.jobId = jobId;
@@ -135,21 +145,26 @@ const processWorkflow = async (wf: IWorkflow) => {
     }
 };
 
-const triggerJobWithS3 = async (node: any, workflowId: string) => {
+const triggerJobWithS3 = async (node: any, workflowId: string, context: any) => {
     const jobId = `job-${crypto.randomUUID()}`;
+
+    const finalScript = wrapCode(node.runtime, node.handler);
     
-    const checksum = crypto.createHash('sha256').update(node.handler).digest('hex');
+    const checksum = crypto.createHash('sha256').update(finalScript).digest('hex');
     const extension = node.runtime === 'python:3.9' ? '.py' : node.runtime === 'bash' ? '.sh' : '.js';
     const s3Key = `scripts/${checksum}${extension}`;
 
-    const command = new PutObjectCommand({
-        Bucket: BUCKET_NAME,
-        Key: s3Key,
-        Body: node.handler,
-        ContentType: 'text/plain'
-    });
-    
-    await s3Client.send(command);
+    try {
+        await s3Client.send(new HeadObjectCommand({ Bucket: BUCKET_NAME, Key: s3Key })); 
+    } catch (err) { 
+        const command = new PutObjectCommand({
+            Bucket: BUCKET_NAME,
+            Key: s3Key,
+            Body: finalScript, 
+            ContentType: 'text/plain'
+        });
+        await s3Client.send(command);
+    }
 
     const job = new JobModel({
         jobId,
@@ -159,7 +174,8 @@ const triggerJobWithS3 = async (node: any, workflowId: string) => {
         state: 'QUEUED',
         payload: { 
             _workflowId: workflowId,
-            _nodeId: node.id
+            _nodeId: node.id,
+            context: context
         },
         attempt: 0,
         maxRetries: 3, 

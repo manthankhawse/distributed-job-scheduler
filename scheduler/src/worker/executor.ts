@@ -30,7 +30,7 @@ export const executeContainer = async (
     payload: any,
     dependencies: string[] = [],
     runtime: string = 'python:3.9'
-): Promise<{ exitCode: number, logs: string }> => {
+): Promise<{ exitCode: number, logs: string, output: any }> => {
 
     const config = RUNTIMES[runtime] || RUNTIMES['python:3.9'];
 
@@ -50,13 +50,16 @@ export const executeContainer = async (
         logger.info(`[Executor] Docker Request: Creating container...`);
 
         await ensureImageExists(config.image);
+        await fsPromises.writeFile(
+            path.join(hostMountPath, 'payload.json'), 
+            JSON.stringify(payload || {})
+        );
         
         const result = await docker.run(
             config.image,
             cmd,
             logStream,
             {
-                Env: [`PAYLOAD=${JSON.stringify(payload)}`],
                 HostConfig: {
                     Binds: [`${hostMountPath}:/app:rw`],
                     AutoRemove: true,
@@ -80,7 +83,16 @@ export const executeContainer = async (
             logger.warn(`[Executor] Could not read logs file.`);
         }
 
-        return { exitCode, logs };
+        let output = null;
+        try {
+            const outputContent = await fsPromises.readFile(
+            path.join(hostMountPath, 'output.json'), 'utf-8'
+            );
+            output = JSON.parse(outputContent);
+        } catch (e) { 
+        }
+
+        return { exitCode, logs, output };
 
     } catch (err) {
         logger.error(`❌ [Executor] Docker Error:`, err);

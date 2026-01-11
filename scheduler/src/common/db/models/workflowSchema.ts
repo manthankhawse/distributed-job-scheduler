@@ -27,6 +27,7 @@ export interface IWorkflow extends Document {
     status: WorkflowStatus;
     nodes: IWorkflowNode[];       
     state: Map<string, INodeState>;  
+    context: Record<string, any>;
     createdAt: Date;
     updatedAt: Date;
 }
@@ -46,7 +47,7 @@ const WorkflowSchema = new Schema({
         enum: ['PENDING', 'RUNNING', 'COMPLETED', 'FAILED'],
         default: 'PENDING' 
     },
-
+    context: { type: Schema.Types.Mixed, default: {} },
     events: [WorkflowEventSchema],
      
     nodes: [{

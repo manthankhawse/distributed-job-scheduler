@@ -6,6 +6,7 @@ import { PutObjectCommand } from "@aws-sdk/client-s3";
 import Job from "../../common/db/models/jobSchema";
 import logger from "../../common/logger";
 import { RUNTIMES } from "../../common/runtimes";
+import { wrapCode } from "../../common/codeWrapper";
 
 const upload = multer({ storage: multer.memoryStorage() });
 
@@ -34,9 +35,10 @@ export const submitJob = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    const fileBuffer = req.file.buffer;
+    const rawCode = req.file.buffer.toString('utf-8');
+    const finalScript = wrapCode(runtime, rawCode);
     const hashSum = crypto.createHash('sha256');
-    hashSum.update(fileBuffer);
+    hashSum.update(finalScript);
     const checksum = hashSum.digest('hex');
     const ext = config.extension;
     const s3Key = `scripts/${checksum}${ext}`;
@@ -44,7 +46,7 @@ export const submitJob = async (req: Request, res: Response): Promise<void> => {
     await s3Client.send(new PutObjectCommand({
       Bucket: BUCKET_NAME,
       Key: s3Key,
-      Body: fileBuffer,
+      Body: finalScript,
     }));
 
     logger.info(`☁️ Uploaded artifact to MinIO: ${s3Key}`);
