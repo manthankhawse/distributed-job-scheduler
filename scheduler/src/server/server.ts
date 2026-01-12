@@ -8,6 +8,7 @@ import jobRoutes from './routes/jobRoutes';
 import workflowRoutes from './routes/workflowRoutes';
 import cors from 'cors';
 import { startOrchestrator } from '../scheduler/orchestrator';
+import { startCronPoller } from '../scheduler/cronPoller';
 
 const app: Express = express();
 
@@ -19,7 +20,7 @@ app.use(express.json());
 connectDB();
 
 app.use('/jobs', jobRoutes);
-app.use('/workflow', workflowRoutes);
+app.use('/workflows', workflowRoutes);
 
 app.get("/health", (req,res)=>{
     res.json({message: "hello"});
@@ -29,6 +30,7 @@ const server: Server = app.listen(3000, ()=>{
     logger.info("server started");
     startPolling();
     startOrchestrator();
+    startCronPoller();
 })
 
 registerShutdownHook(server);

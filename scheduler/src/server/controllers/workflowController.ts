@@ -1,13 +1,42 @@
 import { Request, Response } from 'express';
 import crypto from 'crypto';
 import Workflow from '../../common/db/models/workflowSchema';
+import CronExpressionParser from 'cron-parser';
+import WorkflowSchedule from '../../common/db/models/scheduleSchema';
 
 export const submitWorkflow = async (req: Request, res: Response) => {
     try {
-        const { nodes } = req.body;
+        const { nodes, cron } = req.body;
 
         if (!nodes || !Array.isArray(nodes)) {
             return res.status(400).json({ error: "Invalid nodes array" });
+        }
+
+        if (cron) {
+            try {
+                // Validate Cron
+                const interval = CronExpressionParser.parse(cron);
+                const nextRun = interval.next().toDate();
+
+                const schedule = new WorkflowSchedule({
+                    name: `schedule-${crypto.randomUUID()}`,
+                    cron: cron,
+                    workflowPayload: { nodes }, // Save the blueprint
+                    nextRunAt: nextRun,
+                    enabled: true
+                });
+
+                await schedule.save();
+
+                return res.status(201).json({
+                    success: true,
+                    scheduleId: schedule._id,
+                    message: "Workflow Scheduled",
+                    nextRunAt: nextRun
+                });
+            } catch (e: any) {
+                return res.status(400).json({ error: "Invalid Cron Expression" });
+            }
         }
 
         const workflowId = `wf-${crypto.randomUUID()}`;

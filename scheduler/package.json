@@ -24,6 +24,7 @@
     "@types/mongoose": "^5.11.97",
     "@types/winston": "^2.4.4",
     "cors": "^2.8.5",
+    "cron-parser": "^5.4.0",
     "crypto": "^1.0.1",
     "dockerode": "^4.0.9",
     "dotenv": "^17.2.3",
