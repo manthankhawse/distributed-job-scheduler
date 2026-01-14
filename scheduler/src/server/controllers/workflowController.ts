@@ -66,3 +66,33 @@ export const submitWorkflow = async (req: Request, res: Response) => {
         res.status(500).json({ error: error.message });
     }
 };
+
+
+export const getWorkflows = async (req: Request, res: Response) => {
+    try {
+        const workflows = await Workflow.find({})
+            .sort({ createdAt: -1 })
+            .limit(50);
+        res.json({ success: true, workflows });
+    } catch (error: any) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
+export const getWorkflowById = async (req: Request, res: Response) => {
+    try {
+        const { id } = req.params;
+        if (!id) {
+            return res.status(400).json({ error: "Missing workflowId" });
+        }   
+
+        const workflow = await Workflow.findOne({ workflowId: id });
+        
+        if (!workflow) {
+            return res.status(404).json({ error: "Workflow not found" });
+        }
+        res.json({ success: true, workflow });
+    } catch (error: any) {
+        res.status(500).json({ error: error.message });
+    }
+};

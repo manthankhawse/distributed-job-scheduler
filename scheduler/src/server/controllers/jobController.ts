@@ -51,11 +51,14 @@ export const submitJob = async (req: Request, res: Response): Promise<void> => {
 
     logger.info(`☁️ Uploaded artifact to MinIO: ${s3Key}`);
 
-    let parsedPayload = {};
+    let parsedPayload: any = {};
     try {
-      if (payload) parsedPayload = typeof payload === 'string' ? JSON.parse(payload) : payload;
+      if (payload) {
+        parsedPayload = typeof payload === 'string' ? JSON.parse(payload) : payload;
+      }
     } catch (e) {
       logger.warn("Failed to parse payload JSON, defaulting to {}");
+      parsedPayload = {}; 
     }
 
     let parsedDependencies: string[] = [];

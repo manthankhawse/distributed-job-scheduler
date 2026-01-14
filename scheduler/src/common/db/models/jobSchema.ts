@@ -83,6 +83,7 @@ const jobSchema = new Schema<IJob>(
         },
         payload: {
             type: Object,
+            default: {},
             required: true
         },
         artifactUrl: {

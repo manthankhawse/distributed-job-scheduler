@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate, Link } from "react-router"; // or "react-router-dom"
 import { createJob } from "../api/createJob";
-import { ArrowLeft, Play, Code2, Layers, Cpu } from "lucide-react";
+import { ArrowLeft, Play, Code2, Layers, Cpu, FileCode, FileUp } from "lucide-react";
 
 // --- TEMPLATES ---
 const TEMPLATES: Record<string, { code: string; deps: string }> = {
@@ -57,6 +57,8 @@ function SubmitJob() {
     const navigate = useNavigate();
     
     // Form State
+    const [mode, setMode] = useState<'editor' | 'upload'>('editor');
+    const [uploadedFile, setUploadedFile] = useState<File | null>(null);
     const [name, setName] = useState("");
     const [runtime, setRuntime] = useState("node:18");
     const [code, setCode] = useState(TEMPLATES['node:18'].code);
@@ -89,12 +91,16 @@ function SubmitJob() {
             formData.append('dependencies', JSON.stringify(depList));
         }
 
-        // Handle Code/File
-        // We convert the string code into a file object for the backend
-        const extension = runtime === 'python:3.9' ? '.py' : runtime === 'bash' ? '.sh' : '.js';
-        const blob = new Blob([code], { type: 'text/plain' });
-        const file = new File([blob], `payload${extension}`);
-        formData.append('script', file);
+        
+
+        if (mode === 'upload' && uploadedFile) {
+            formData.append('script', uploadedFile); 
+        } else {
+            const ext = runtime === 'python:3.9' ? '.py' : runtime === 'bash' ? '.sh' : '.js';
+            const blob = new Blob([code], { type: 'text/plain' });
+            const file = new File([blob], `script${ext}`);
+            formData.append('script', file);
+        }
 
         mutation.mutate(formData);
     };
@@ -176,8 +182,16 @@ function SubmitJob() {
                         </div>
                     </div>
 
-                    {/* 2. Code Editor */}
-                    <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm space-y-4">
+                                        <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm space-y-4">
+                                            <div className="flex justify-between items-center">
+                        <h2 className="font-semibold flex items-center gap-2 text-slate-800"><Code2 className="w-4 h-4" /> Execution Logic</h2>
+                        <div className="flex bg-slate-100 p-1 rounded-lg">
+                            <button type="button" onClick={() => setMode('editor')} className={`px-3 py-1 text-xs font-medium rounded-md transition ${mode === 'editor' ? 'bg-white shadow text-slate-900' : 'text-slate-500'}`}>Editor</button>
+                            <button type="button" onClick={() => setMode('upload')} className={`px-3 py-1 text-xs font-medium rounded-md transition ${mode === 'upload' ? 'bg-white shadow text-slate-900' : 'text-slate-500'}`}>Upload File</button>
+                        </div>
+                    </div>
+                    {mode === 'editor' ? (
+                        <>
                         <h2 className="font-semibold flex items-center gap-2 text-gray-800">
                             <Code2 className="w-4 h-4" /> Source Code
                         </h2>
@@ -192,7 +206,31 @@ function SubmitJob() {
                                 {runtime}
                             </div>
                         </div>
-                    </div>
+                        </>
+                    ) : (
+                        <div className="border-2 border-dashed border-slate-300 rounded-lg p-8 text-center hover:bg-slate-50 transition cursor-pointer relative">
+                            <input 
+                                type="file" 
+                                className="absolute inset-0 opacity-0 cursor-pointer" 
+                                onChange={(e) => setUploadedFile(e.target.files?.[0] || null)}
+                            />
+                            <div className="flex flex-col items-center gap-2 text-slate-500">
+                                {uploadedFile ? (
+                                    <>
+                                        <FileCode className="w-8 h-8 text-indigo-500" />
+                                        <span className="text-slate-900 font-medium">{uploadedFile.name}</span>
+                                        <span className="text-xs">{(uploadedFile.size / 1024).toFixed(2)} KB</span>
+                                    </>
+                                ) : (
+                                    <>
+                                        <FileUp className="w-8 h-8" />
+                                        <span>Click to upload script ({runtime === 'python:3.9' ? '.py' : '.js'})</span>
+                                    </>
+                                )}
+                            </div>
+                        </div>
+                    )}
+                </div>
 
                     {/* 3. Payload */}
                     <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm space-y-4">
