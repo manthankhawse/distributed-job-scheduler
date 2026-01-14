@@ -38,10 +38,12 @@ export const startCronPoller = () => {
 
                 const newWorkflow = new Workflow({
                     workflowId,
+                    scheduleId: schedule._id,
                     status: 'PENDING', // The Orchestrator picks this up immediately
+                    trigger: 'CRON',
                     nodes: nodes,
                     state: initialState,
-                    context: {}, // Fresh context for every run
+                    context: {},
                     events: [{ type: 'TRIGGERED', details: `Scheduled by ${schedule.name}` }]
                 });
 

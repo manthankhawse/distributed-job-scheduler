@@ -356,7 +356,7 @@ export default function CreateWorkflow() {
                     <div className="flex-1 overflow-y-auto p-6">
                         <h3 className="text-xs font-bold uppercase text-slate-400 mb-4">Pipeline Steps ({nodes.length})</h3>
                         <div className="space-y-3">
-                            {nodes.map((node, i) => (
+                            {nodes.map((node) => (
                                 <div key={node.id} className="p-3 bg-white border border-slate-200 rounded-lg shadow-sm group">
                                     <div className="flex justify-between items-start">
                                         <div>

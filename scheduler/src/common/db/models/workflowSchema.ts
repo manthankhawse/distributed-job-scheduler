@@ -23,6 +23,7 @@ interface INodeState {
 export interface IWorkflow extends Document {
     events: any;
     workflowId: string;
+    scheduleId?: string;
     trigger: 'MANUAL' | 'CRON' | 'WEBHOOK';
     status: WorkflowStatus;
     nodes: IWorkflowNode[];       
@@ -42,6 +43,7 @@ const WorkflowEventSchema = new Schema({
 const WorkflowSchema = new Schema({
     workflowId: { type: String, required: true, unique: true },
     trigger: { type: String, default: 'MANUAL' },
+    scheduleId: { type: String },
     status: { 
         type: String, 
         enum: ['PENDING', 'RUNNING', 'COMPLETED', 'FAILED'],
