@@ -9,6 +9,8 @@ import workflowRoutes from './routes/workflowRoutes';
 import cors from 'cors';
 import { startOrchestrator } from '../scheduler/orchestrator';
 import { startCronPoller } from '../scheduler/cronPoller';
+import path from 'path';
+import { ensureBucketExists } from '../common/s3/s3Client';
 
 const app: Express = express();
 
@@ -17,7 +19,8 @@ const app: Express = express();
 app.use(cors());
 app.use(express.json());
 
-connectDB();
+const frontendPath = path.join(__dirname, '../../public'); 
+app.use(express.static(frontendPath));
 
 app.use('/jobs', jobRoutes);
 app.use('/workflows', workflowRoutes);
@@ -26,12 +29,30 @@ app.get("/health", (req,res)=>{
     res.json({message: "hello"});
 })
 
-const server: Server = app.listen(3000, ()=>{
-    logger.info("server started");
-    startPolling();
-    startOrchestrator();
-    startCronPoller();
-})
 
-registerShutdownHook(server);
+app.get(/.*/, (req, res) => {
+    res.sendFile(path.join(frontendPath, 'index.html'));
+});
+const start = async () => {
+    try { 
+        await connectDB();
+        await ensureBucketExists();
+
+        const server: Server = app.listen(3000, () => {
+            logger.info("🚀 Flux Platform Monolith Started on Port 3000");
+             
+            startPolling();
+            startOrchestrator();
+            startCronPoller();
+        });
+
+        registerShutdownHook(server);
+
+    } catch (error) {
+        logger.error("❌ Failed to start server:", error);
+        process.exit(1);
+    }
+};
+
+start(); 
 

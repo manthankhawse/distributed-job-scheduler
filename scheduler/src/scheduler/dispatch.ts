@@ -4,7 +4,13 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const client = new Redis();
+const redisHost = process.env.REDIS_HOST || 'localhost';
+const redisPort = Number(process.env.REDIS_PORT) || 6379;
+const client = new Redis({
+    host: redisHost, 
+    port: redisPort,
+    maxRetriesPerRequest: null
+});
 
 export const isQueueFull = async (): Promise<boolean>=>{
     try {
