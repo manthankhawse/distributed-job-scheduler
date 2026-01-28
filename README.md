@@ -266,9 +266,9 @@ Retrieve execution logs, exit codes, and metadata.
 
 | Metric | Performance |
 | --- | --- |
-| **Ingestion Throughput** | ~5,200 jobs/min |
-| **Dispatch Latency** | < 45ms (p95) |
-| **Recovery Time** | < 2.8s |
+| **Ingestion Throughput** | 9000+ jobs/min |
+| **Dispatch Latency** | < 500ms (p95) |
+| **Recovery Time** | < 3s |
 | **Concurrent Workers** | Horizontal Scaling (1 -> N) |
 
 *Benchmarks run on standard commodity hardware.*
